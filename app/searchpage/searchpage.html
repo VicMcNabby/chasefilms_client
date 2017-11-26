@@ -13,4 +13,17 @@
       </div>
     </div>
   </div>
+  <div class="movieResultsSection">
+    <div class="container movieResults col-sm-4 col-md-3" ng-repeat="movie in $ctrl.movies">
+      <div class="movieBox">
+        <h4 class="movieTitle">{{movie.title}}</h4>
+        <img class="moviePoster" src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" />
+        <div class="descriptionBox">
+          <p class="movieDescription">
+            {{movie.overview}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

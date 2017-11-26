@@ -1,0 +1,22 @@
+<div class="moviePage" ng-repeat="info in $ctrl.movie">
+  <div class="moviePageVideos">
+    <h3 class="moviePageHeader">Videos</h3>
+    <p ng-repeat="video in $ctrl.videos">
+      <a class="movieLink" href="https://www.youtube.com/watch?v={{video.key}}" target="_blank"> {{video.name}} </a></p>
+  </div>
+  <div class="moviePageBox">
+    <h1 class="moviePageTitle">{{info.title}}</h1>
+    <h4 class="moviePageTagline">{{info.tagline}}</h4>
+    <img class="moviePagePoster" src="http://image.tmdb.org/t/p/w185/{{info.poster_path}}" />
+    <p class="moviePageDescription">{{info.overview}}</p>
+  </div>
+  <div class="moviePageSites">
+    <h3 class="moviePageHeader">More Info</h3>
+    <p>
+      <a class="movieLink" href="https://www.imdb.com/title/{{info.imdb_id}}" target="_blank">  IMDB</a>
+    </p>
+
+    <a class="movieLink" href={{info.homepage}} target="_blank">{{info.homepage}}</a>
+
+  </div>
+</div>

@@ -14,6 +14,9 @@
       }).state('searchpage', {
         url: '/searchpage',
         component: 'searchpage'
+      }).state('moviepage', {
+        url: '/moviepage',
+        component: 'moviepage'
       })
 
     $urlServiceProvider.rules.otherwise({

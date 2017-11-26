@@ -1,0 +1,131 @@
+.moviePage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-height: 100vh;
+  height: 100%;
+  border-radius: 4px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  border: .5px solid #c9ced6;
+  box-shadow: 3px 3px 10px #333;
+  background: linear-gradient(to bottom right, #163c7a, #359499, #174f1b);
+}
+
+.moviePageHeader {
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px 1px #222;
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.moviePageVideos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  align-items: center;
+  text-align: center;
+  width: 27%;
+  padding-left: 10px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.moviePageSites {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  /*align-items: center;*/
+  width: 27%;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+}
+
+.moviePageTitle {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 3%;
+  text-align: center;
+  color: white;
+  border: 2px white solid;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px black;
+  background: linear-gradient(#146dad, #174670, #072c47);
+}
+
+.moviePageTagline {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 0;
+  text-shadow: 1px 1px 1px black;
+  font-style: italic;
+  color: white;
+  text-align: center;
+}
+
+.moviePageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 44%;
+}
+
+.moviePagePoster {
+  width: 250px;
+  box-shadow: 6px 6px 8px #111;
+  margin-bottom: 15px;
+  border-radius: 2px;
+  border: 1px solid white;
+}
+
+.moviePageDescription {
+  width: 95%;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.movieLink {
+  text-decoration: none;
+  color: white;
+}
+
+.movieLink:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.movieLink:active {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .moviePage {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .moviePageBox {
+    order: 1;
+    width: 90%;
+  }
+  .moviePageVideos {
+    order: 2;
+    width: 90%;
+  }
+  .moviePageSites {
+    width: 90%;
+    order: 3;
+  }
+  .moviePagePoster {
+    margin-bottom: 5%;
+  }
+}

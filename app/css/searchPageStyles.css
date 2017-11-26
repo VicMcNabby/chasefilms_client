@@ -1,13 +1,16 @@
 .searchPage {
-  height: 92vh;
-  justify-content: space-around;
+  min-height: 100vh;
+  height: 100%;
+  /*display: flex;
+  flex-direction: column;*/
+  /*justify-content: space-around;*/
   border-radius: 4px;
   margin-left: 2%;
   margin-right: 2%;
   margin-top: 2%;
   border: .5px solid #c9ced6;
   box-shadow: 3px 3px 10px #333;
-  background: linear-gradient(90deg, white, #fffdb2, #f2b285)
+  background: linear-gradient(90deg, #fffdb2, #f2f0d2, #f2b285);
 }
 
 .logOut {
@@ -23,7 +26,7 @@
   text-align: center;
   font-family: 'Nova Flat', sans-serif;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   z-index: 2;
   background: linear-gradient(90deg, white, #fffdb2, #f2b285)
 }
@@ -70,6 +73,61 @@
   background: #113a59;
 }
 
+.movieResultsSection {
+  margin-top: 29%;
+  max-width: 96vw;
+  /*display: flex;
+  flex-direction: row;*/
+  columns: 4;
+  padding-left: 10px;
+}
+
+.movieResults {
+  border: 1px black solid;
+  box-shadow: 4px 4px 6px #555;
+  border-radius: 4px;
+  text-align: center;
+  height: 400px;
+  background: linear-gradient(#082f56, #efca8b, white);
+  width: 96%;
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.movieResults:hover {
+  background: linear-gradient(#2d679b, #f7f9b8, white);
+  box-shadow: 1px 1px 2px #777;
+}
+
+.movieTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  color: #fffcc6;
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 1px 1px 1px black;
+  font-weight: 600;
+}
+
+.moviePoster {
+  height: 250px;
+  width: 180px;
+  /*min-height: 90%;
+  width: 70%;*/
+  box-shadow: 5px 5px 8px #222;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.movieDescription {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+}
+
 @media only screen and (max-width:1000px) {
   .searchPageInput {
     margin-top: 25px;
@@ -79,30 +137,46 @@
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:930px) {
   .searchPageInput {
     margin-top: 55px;
   }
   .logOut {
     margin-left: 80%;
   }
+  .movieResultsSection {
+    margin-top: 45%;
+    max-width: 96vw;
+    columns: 2;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .searchPage {
     height: 95vh;
+    min-height: 100vh;
+    height: 100%;
     margin-top: 4%;
+    background: linear-gradient(90deg, #f2b285, #fffdb2)
   }
   .chaseFilmStrip {
     width: 80%;
   }
   .searchPageInput {
     width: 90vw;
+    margin-bottom: 30px;
   }
   .searchImage {
     height: 50vh;
   }
   .logOut {
     margin-left: 75%;
+  }
+  .movieResultsSection {
+    margin-top: 100%;
+    max-width: 93vw;
+    padding-left: 5%;
+    /*display: inline-grid;*/
+    columns: 1;
   }
 }
