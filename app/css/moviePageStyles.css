@@ -2,15 +2,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   height: 100%;
-  border-radius: 4px;
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 2%;
-  border: .5px solid #c9ced6;
-  box-shadow: 3px 3px 10px #333;
-  background: linear-gradient(to bottom right, #163c7a, #359499, #174f1b);
+  border-radius: 8px;
+  margin: 2%;
+  border: 1px solid #fff;
+  box-shadow: 5px 5px 10px #222;
+  /*background: linear-gradient(#06393d, #83d5db, #06393d, #83d5db), url("http://www.texasmusicpickers.com/wp-content/uploads/2015/11/Spotlight.jpg") no-repeat;
+  background: linear-gradient(#05384f, #e0e0e0, #05384f), url("http://www.texasmusicpickers.com/wp-content/uploads/2015/11/Spotlight.jpg") no-repeat;*/
+  background: linear-gradient(#fff, #afd8ea, #212121), url("http://moziru.com/images/theatre-clipart-stage-background-16.png") no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
 }
 
 .moviePageHeader {
@@ -26,11 +29,13 @@
   display: flex;
   flex-direction: column;
   margin-top: 10%;
+  margin-bottom: 5%;
   align-items: center;
   text-align: center;
   width: 27%;
   padding-left: 10px;
   color: white;
+  font-weight: bolder;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -38,25 +43,27 @@
   display: flex;
   flex-direction: column;
   margin-top: 10%;
-  /*align-items: center;*/
+  margin-bottom: 5%;
   width: 27%;
   color: white;
   font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
   text-overflow: ellipsis;
   overflow: hidden;
   text-align: center;
 }
 
 .moviePageTitle {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-shadow: 1px 1px 2px black;
   margin-bottom: 3%;
   text-align: center;
-  color: white;
-  border: 2px white solid;
-  padding: 5px 15px 5px 15px;
-  border-radius: 10px;
+  color: #fff;
+  border: 2px #888 solid;
+  padding: 3px 10px 5px 10px;
+  border-radius: 30px;
   box-shadow: 4px 4px 6px black;
-  background: linear-gradient(#146dad, #174670, #072c47);
+  background: linear-gradient( #042c44, #09283a);
 }
 
 .moviePageTagline {
@@ -80,23 +87,43 @@
   box-shadow: 6px 6px 8px #111;
   margin-bottom: 15px;
   border-radius: 2px;
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 
 .moviePageDescription {
+  text-align: center;
   width: 95%;
   color: white;
   font-family: 'Raleway', sans-serif;
+  box-shadow: 4px 4px 6px #111;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+  text-shadow: 1px 1px 1px black;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #044f5e, #163c7a);
+  background: linear-gradient(#232323, #464746)
+}
+
+.moviePageDescriptionTitle {
+  text-align: center;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px 1px #222;
 }
 
 .movieLink {
   text-decoration: none;
   color: white;
+  text-shadow: 1px 1px 1px black;
 }
 
 .movieLink:hover {
   text-decoration: none;
   color: white;
+  text-shadow: 2px 2px 4px black;
 }
 
 .movieLink:active {
@@ -109,9 +136,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 4%;
+    margin: 4% 5% 5% 3%;
+    border: 1px solid #fff;
     padding-top: 10px;
     padding-bottom: 10px;
+    background: linear-gradient(#359499, #ffe066, #114268), url("https://static.wixstatic.com/media/328a23_338e082b52f541c48e78d37a93dbd47c~mv2.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .moviePageBox {
     order: 1;
@@ -120,6 +151,7 @@
   .moviePageVideos {
     order: 2;
     width: 90%;
+    margin-bottom: 0;
   }
   .moviePageSites {
     width: 90%;
