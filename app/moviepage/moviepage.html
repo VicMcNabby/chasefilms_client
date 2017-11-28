@@ -5,7 +5,7 @@
       <a class="movieLink" href="https://www.youtube.com/watch?v={{video.key}}" target="_blank"> {{video.name}} </a></h4>
   </div>
   <div class="moviePageBox">
-    <h1>{{$ctrl.service.movieId}}</h1>
+    <p class="searchAgain" ui-sref="searchpage">Search Again <i class="fa fa-search" aria-hidden="true"></i></p>
     <h1 class="moviePageTitle">{{info.title}}</h1>
     <h4 class="moviePageTagline">{{info.tagline}}</h4>
     <img class="moviePagePoster" src="http://image.tmdb.org/t/p/w185/{{info.poster_path}}" />

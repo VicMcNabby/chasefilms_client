@@ -7,7 +7,7 @@
 
   function MovieService() {
     return {
-      movieId: null
+      movieId: 11
     }
   }
 

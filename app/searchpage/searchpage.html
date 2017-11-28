@@ -1,20 +1,19 @@
 <div class="searchPage">
-  <p class="logOut">
+  <p class="logOut" ui-sref="home">
     Log Out
   </p>
   <div class="searchImage">
     <img class="chaseFilmStrip" src="app/images/CFStrip.png" />
     <div class="searchPageInput">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Find movies...">
+        <input ng-model="$ctrl.searchTerm" type="text" class="form-control" placeholder="Find movies...">
         <span class="input-group-btn">
-        <button class="btn btn-primary searchPageButton" type="button">Search</button>
+        <button ng-click="$ctrl.findMovies()"class="btn btn-primary searchPageButton" type="button">Search</button>
       </span>
       </div>
     </div>
   </div>
   <div class="movieResultsSection">
-    <h1>{{$ctrl.service.movieId}}</h1>
     <div ng-click="$ctrl.getInfo(movie)" class="container movieResults col-sm-4 col-md-3" ng-repeat="movie in $ctrl.movies" ui-sref="moviepage">
       <div class="movieBox">
         <h4 class="movieTitle">{{movie.title}}</h4>
