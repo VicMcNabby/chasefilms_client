@@ -13,6 +13,7 @@
           .then(results => {
             console.log(results);
             vm.movies = results.data.results
+            vm.searchTerm = '';
           })
       }
       vm.movies = []

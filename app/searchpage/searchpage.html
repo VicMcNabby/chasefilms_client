@@ -5,12 +5,14 @@
   <div class="searchImage">
     <img class="chaseFilmStrip" src="app/images/CFStrip.png" />
     <div class="searchPageInput">
-      <div class="input-group">
+
+      <form class="input-group">
         <input ng-model="$ctrl.searchTerm" type="text" class="form-control" placeholder="Find movies...">
         <span class="input-group-btn">
-        <button ng-click="$ctrl.findMovies()"class="btn btn-primary searchPageButton" type="button">Search</button>
+        <button ng-click="$ctrl.findMovies()"class="btn btn-primary searchPageButton" type="submit">Search</button>
       </span>
-      </div>
+      </form>
+
     </div>
   </div>
   <div class="movieResultsSection">

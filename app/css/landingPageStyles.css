@@ -11,9 +11,10 @@ body {
   margin-top: 2%;
   border: .5px solid #c9ced6;
   box-shadow: 3px 3px 5px #333;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
+  background: linear-gradient( #183c60, #000, #fff), url("https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/film-stripe-or-film-reel-on-shiny-movie-background-10_G1ATkKj__thumb.jpg") no-repeat;
   background-size: cover;
-  background-image: url("https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/film-stripe-or-film-reel-on-shiny-movie-background-10_G1ATkKj__thumb.jpg");
+  background-blend-mode: multiply;
 }
 
 .landingPageBox {
@@ -173,6 +174,9 @@ body {
     margin-top: 4%;
     margin-right: 2%;
     margin-left: 1%;
+    background: linear-gradient( #183c60, #fff, #999, #000), url("https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/film-stripe-or-film-reel-on-shiny-movie-background-10_G1ATkKj__thumb.jpg") no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
   }
   .landingPageBox {
     display: flex;
@@ -182,16 +186,16 @@ body {
     margin-left: 80%;
   }
   .signUpSlogan {
-    color: #1a4072;
+    color: #fff;
     font-weight: bolder;
-    text-shadow: 1px 1px 2px white;
-    font-family: 'Fjalla One', sans-serif;
+    text-shadow: 1px 1px 2px #000;
+    font-family: 'Raleway', sans-serif;
   }
   .beginSlogan {
-    color: #1a4072;
+    color: #fdffdb;
     font-weight: bolder;
-    text-shadow: 1px 1px 2px white;
-    font-family: 'Fjalla One', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    font-family: 'Oswald', sans-serif;
   }
   .signUpTicket {
     animation-name: slideup;
