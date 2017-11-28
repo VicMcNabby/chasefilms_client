@@ -11,7 +11,6 @@ body {
   margin-top: 2%;
   border: .5px solid #c9ced6;
   box-shadow: 3px 3px 5px #333;
-  /*background-repeat: no-repeat;*/
   background: linear-gradient( #183c60, #000, #fff), url("https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/film-stripe-or-film-reel-on-shiny-movie-background-10_G1ATkKj__thumb.jpg") no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
@@ -39,18 +38,20 @@ body {
   margin-bottom: 0;
   margin-left: 90%;
   margin-right: 2%;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 3px;
-  box-shadow: 2px 2px 4px black;
-  border: 1px white solid;
-  color: white;
+  background: #376059;
+  box-shadow: 2px 2px 4px #000;
+  border: 1px #999 solid;
+  color: #fff;
   text-align: center;
   font-family: 'Nova Flat', sans-serif;
   cursor: pointer;
 }
 
 .logIn:hover {
-  box-shadow: 1px 1px 2px black;
+  box-shadow: 1px 1px 2px #000;
+  background: #618780;
 }
 
 .getStartedBox {
@@ -64,16 +65,16 @@ body {
   margin-bottom: 3%;
   text-shadow: 2px 2px 4px #1a4072;
   font-style: italic;
-  color: white;
+  color: #fff;
 }
 
 .beginSlogan {
   font-family: 'Comfortaa', sans-serif;
   margin-bottom: 3%;
   margin-top: 0;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px #000;
   font-style: italic;
-  color: white;
+  color: #fff;
   animation-name: fadein;
   animation-duration: 2s;
 }
@@ -124,14 +125,14 @@ body {
 .submitButton {
   margin-top: 15px;
   margin-right: 20%;
-  border: 1px solid white;
-  box-shadow: 1px 1px 1px black;
+  border: 1px solid #fff;
+  box-shadow: 1px 1px 1px #000;
   background: #113a59;
 }
 
 .submitButton:hover {
   box-shadow: none;
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 
 .modalBody {
@@ -213,9 +214,6 @@ body {
     width: 90%;
     margin-bottom: 15%;
   }
-  /*.modalBody {
-    width: 90vw;
-  }*/
   .modalBox {
     margin-top: 30%;
   }

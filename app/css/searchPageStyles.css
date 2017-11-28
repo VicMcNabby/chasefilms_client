@@ -15,7 +15,7 @@
   margin-right: 2%;
   border-radius: 4px;
   padding: 3px 6px 3px 6px;
-  box-shadow: 2px 2px 4px #333;
+  box-shadow: 2px 2px 2px #333;
   border: 1px white solid;
   color: black;
   text-align: center;
@@ -70,7 +70,7 @@
 }
 
 .movieResultsSection {
-  margin-top: 30%;
+  margin-top: 33%;
   max-width: 96vw;
   columns: 4;
   padding-left: 10px;
@@ -109,10 +109,8 @@
 }
 
 .moviePoster {
-  height: 250px;
-  width: 180px;
-  /*min-height: 90%;
-  width: 70%;*/
+  height: 200px;
+  width: 140px;
   box-shadow: 5px 5px 8px #222;
   border: 1px solid white;
   margin-bottom: 15px;

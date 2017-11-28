@@ -79,10 +79,9 @@
 }
 
 .moviePagePoster {
-  width: 250px;
+  width: 200px;
   box-shadow: 6px 6px 8px #111;
   margin-bottom: 15px;
-  border-radius: 2px;
   border: 1px solid #fff;
 }
 
