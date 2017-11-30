@@ -124,19 +124,20 @@ body {
 .submitButton {
   margin-top: 15px;
   margin-right: 27%;
-  border: 1px solid #fff;
-  box-shadow: 1px 1px 1px #000;
+  border: 1px solid #113a59;
+  box-shadow: 1px 1px 1px #333;
   background: #113a59;
+  border-radius: 1px;
 }
 
 .submitButton:hover {
   box-shadow: none;
-  border: 1px solid #fff;
+  border: 1px solid #113a59;
 }
 
 .modalBody {
   width: 300px;
-  background: #c9c9bf;
+  background: #c5d6d6;
   border-radius: 2px;
 }
 

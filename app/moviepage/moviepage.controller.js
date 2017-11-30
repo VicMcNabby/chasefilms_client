@@ -45,7 +45,6 @@
     vm.clicked1 = function() {
       vm.movieRating = 1
     }
-    // let title = vm.newMovie.title
 
     vm.getMovieRating = function() {
       console.log(vm.movieRating);
