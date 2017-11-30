@@ -1,10 +1,10 @@
 .searchPage {
   min-height: 100vh;
   height: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
   margin: 2%;
   border: 1px solid #c9ced6;
-  box-shadow: 2px 2px 5px #333;
+  box-shadow: 3px 3px 5px #333;
   background: linear-gradient(90deg, #fffdb2, #f2f0d2, #f2b285);
 }
 
@@ -37,7 +37,7 @@
   margin-left: 1vw;
   margin-top: 2vh;
   position: absolute;
-  border-radius: 2px;
+  border-radius: 3px;
   box-shadow: 1px 1px 2px #000;
   background: linear-gradient(90deg, #f0f2bf, #2f497c, #f0f2bf), url("https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,fl_lossy/g5/g5-c-idgh48mn-pacific-urban-residential/g5-cl-53qvv26ht-vue-hollywood/uploads/downtown-los-angeles-hero-resized.jpg") no-repeat;
   background-blend-mode: multiply;
@@ -70,23 +70,21 @@
 }
 
 .movieResultsSection {
-  margin-top: 33%;
+  margin-top: 31%;
   max-width: 96vw;
   columns: 4;
   padding-left: 10px;
 }
 
 .movieResults {
+  overflow: hidden;
   border: 1px black solid;
   box-shadow: 1px 1px 2px #777;
-  border-radius: 2px;
   text-align: center;
   height: 400px;
   background: linear-gradient(#082f56, #efca8b, white);
   width: 96%;
   margin-bottom: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding-bottom: 10px;
   cursor: pointer;
 }
@@ -102,7 +100,7 @@
   justify-content: center;
   min-height: 40px;
   color: #fff;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Saira Extra Condensed', sans-serif;
   text-shadow: 1px 1px 1px black;
   font-weight: 600;
   border-radius: 2px;
@@ -111,8 +109,8 @@
 .moviePoster {
   height: 200px;
   width: 140px;
-  box-shadow: 5px 5px 8px #222;
-  border: 1px solid white;
+  box-shadow: 2px 2px 4px #000;
+  border: 1px solid #999;
   margin-bottom: 15px;
 }
 

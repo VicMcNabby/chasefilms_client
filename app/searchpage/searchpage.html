@@ -19,12 +19,10 @@
     <div ng-click="$ctrl.getInfo(movie)" class="container movieResults col-sm-4 col-md-3" ng-repeat="movie in $ctrl.movies" ui-sref="moviepage">
       <div class="movieBox">
         <h4 class="movieTitle">{{movie.title}}</h4>
-        <img class="moviePoster" src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" />
-        <div class="descriptionBox">
-          <p class="movieDescription">
-            {{movie.overview}}
-          </p>
-        </div>
+        <img class="moviePoster" src={{movie.poster_path}} />
+        <p class="movieDescription">
+          {{movie.overview}}
+        </p>
       </div>
     </div>
   </div>

@@ -5,13 +5,13 @@ body {
 .landingPage {
   height: 92vh;
   justify-content: space-around;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-left: 2%;
   margin-right: 2%;
   margin-top: 2%;
-  border: .5px solid #c9ced6;
+  padding-top: 15px;
   box-shadow: 3px 3px 5px #333;
-  background: linear-gradient( #183c60, #000, #fff), url("https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/film-stripe-or-film-reel-on-shiny-movie-background-10_G1ATkKj__thumb.jpg") no-repeat;
+  background: linear-gradient( #183c60, #000, #fff, #20537c), url("https://d1yn1kh78jj1rr.cloudfront.net/image/thumbnail/rDtN98Qoishumwih/film-stripe-or-film-reel-on-shiny-movie-background-10_G1ATkKj__thumb.jpg") no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
 }
@@ -34,13 +34,12 @@ body {
 }
 
 .logIn {
-  margin-top: 5px;
   margin-bottom: 0;
   margin-left: 90%;
   margin-right: 2%;
   border-radius: 2px;
   padding: 3px;
-  background: #376059;
+  background: #20537c;
   box-shadow: 2px 2px 4px #000;
   border: 1px #999 solid;
   color: #fff;
@@ -51,7 +50,7 @@ body {
 
 .logIn:hover {
   box-shadow: 1px 1px 2px #000;
-  background: #618780;
+  background: #4483b5;
 }
 
 .getStartedBox {
@@ -61,7 +60,7 @@ body {
 }
 
 .signUpSlogan {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Saira Extra Condensed', sans-serif;
   margin-bottom: 3%;
   text-shadow: 2px 2px 4px #1a4072;
   font-style: italic;
@@ -118,13 +117,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 22%;
-  font-family: 'Oswald', sans-serif;
+  margin-right: 14%;
+  font-family: 'Raleway', sans-serif;
 }
 
 .submitButton {
   margin-top: 15px;
-  margin-right: 20%;
+  margin-right: 27%;
   border: 1px solid #fff;
   box-shadow: 1px 1px 1px #000;
   background: #113a59;
@@ -137,7 +136,7 @@ body {
 
 .modalBody {
   width: 300px;
-  background: #e0e0d7;
+  background: #c9c9bf;
   border-radius: 2px;
 }
 
@@ -162,7 +161,11 @@ body {
   justify-content: center;
   border-bottom: none;
   padding-bottom: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+}
+
+.modalInput {
+  padding-left: 3px;
 }
 
 .closeModal {

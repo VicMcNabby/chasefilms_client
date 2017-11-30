@@ -56,6 +56,8 @@
 
 .moviePageTitle {
   font-family: 'Oswald', sans-serif;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-transform: uppercase;
   text-shadow: 1px 1px 2px black;
   margin-bottom: 3%;
   text-align: center;
@@ -69,6 +71,7 @@
   font-style: italic;
   color: white;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .moviePageBox {
@@ -82,7 +85,7 @@
   width: 200px;
   box-shadow: 6px 6px 8px #111;
   margin-bottom: 15px;
-  border: 1px solid #fff;
+  border: 1px solid #555;
 }
 
 .moviePageDescription {
@@ -104,6 +107,11 @@
 }
 
 .movieLink {
+  display: block;
+  width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   text-decoration: none;
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -115,9 +123,10 @@
   text-shadow: 2px 2px 4px black;
 }
 
-.movieLink:active {
-  text-decoration: none;
-  color: white;
+.headerBox {
+  display: flex;
+  flex-direction: row;
+  max-height: 50px;
 }
 
 .searchAgain {
@@ -129,15 +138,126 @@
   text-shadow: 1px 1px 2px #000;
   border-radius: 2px;
   font-family: 'Oswald', sans-serif;
-  margin-left: 170%;
+  margin-left: 175%;
   min-width: 120px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
 .searchAgain:hover {
   background: #214972;
+}
+
+.moviePageButtonCollection {
+  color: #000;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-transform: uppercase;
+  background: #D9DD92;
+  margin: 5px;
+  min-width: 250px;
+  box-shadow: 2px 2px 3px #000;
+  border: 1px solid #777;
+}
+
+.moviePageButtonWatchList {
+  color: #fff;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-transform: uppercase;
+  background: #44633F;
+  margin: 5px;
+  min-width: 250px;
+  box-shadow: 2px 2px 3px #000;
+  border: 1px solid #777;
+}
+
+.chaseFilmsLogo {
+  width: 130px;
+  margin-right: 190%;
+}
+
+.ratingLabel {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.movieRatingForm {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.moviePageRatingInput {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  box-shadow: 2px 2px 2px #000;
+}
+
+.movieRatingSubmitButton {
+  background: #36494E;
+  font-family: "Raleway", sans-serif;
+}
+
+.movieRatingSubmitButton:hover {
+  background: #52676d;
+}
+
+.moviePageModal {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  align-items: center;
+}
+
+.modalConfirmationButtons {
+  display: flex;
+}
+
+.confirmationButtonsYes {
+  margin: 3px;
+  width: 70px;
+  background: #346082;
+  color: #fff;
+  box-shadow: 1px 1px 1px #000;
+}
+
+.confirmationButtonsNo {
+  margin: 3px;
+  width: 70px;
+  background: #bc281e;
+  color: #fff;
+  box-shadow: 1px 1px 1px #000;
+}
+
+.confirmationButtonsNo:hover {
+  box-shadow: none;
+  background: #dd564d;
+  color: #fff;
+}
+
+.confirmationButtonsYes:hover {
+  box-shadow: none;
+  background: #4580ad;
+  color: #fff;
+}
+
+.moviePageCollectionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moviePageCollectionSubmit {
+  color: #000;
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-transform: uppercase;
+  background: #DB7F67;
+  margin-bottom: 15px;
+  min-width: 200px;
+  box-shadow: 2px 2px 3px #000;
+  border: 1px solid #777;
 }
 
 @media only screen and (max-width: 600px) {
@@ -168,5 +288,8 @@
   }
   .searchAgain {
     margin-left: 0;
+  }
+  .chaseFilmsLogo {
+    display: none;
   }
 }
