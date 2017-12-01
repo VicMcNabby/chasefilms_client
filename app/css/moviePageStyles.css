@@ -180,28 +180,14 @@
   margin-top: 10px;
   margin-bottom: 0;
   font-family: 'Saira Extra Condensed', sans-serif;
-  color: #fff;
+  color: #000;
   text-align: center;
 }
 
-.movieRatingForm {
-  width: 150px;
-  margin-bottom: 15px;
-}
-
-.moviePageRatingInput {
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  box-shadow: 2px 2px 2px #000;
-}
-
-.movieRatingSubmitButton {
-  background: #36494E;
-  font-family: "Raleway", sans-serif;
-}
-
-.movieRatingSubmitButton:hover {
-  background: #52676d;
+.moviePageModalBody {
+  width: 330px;
+  background: #c5d6d6;
+  border-radius: 2px;
 }
 
 .moviePageModal {
@@ -218,17 +204,19 @@
 .confirmationButtonsYes {
   margin: 3px;
   width: 70px;
-  background: #346082;
+  background: #436a6d;
   color: #fff;
   box-shadow: 1px 1px 1px #000;
+  border-radius: 2px;
 }
 
 .confirmationButtonsNo {
   margin: 3px;
   width: 70px;
-  background: #bc281e;
+  background: #DD7373;
   color: #fff;
   box-shadow: 1px 1px 1px #000;
+  border-radius: 2px;
 }
 
 .confirmationButtonsNo:hover {
@@ -239,7 +227,7 @@
 
 .confirmationButtonsYes:hover {
   box-shadow: none;
-  background: #4580ad;
+  background: #5e9093;
   color: #fff;
 }
 
@@ -247,17 +235,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #888;
 }
 
 .moviePageCollectionSubmit {
-  color: #000;
+  color: #fff;
   font-family: 'Saira Extra Condensed', sans-serif;
   text-transform: uppercase;
-  background: #DB7F67;
+  background: #436a6d;
   margin-bottom: 15px;
   min-width: 200px;
-  box-shadow: 2px 2px 3px #000;
-  border: 1px solid #777;
+  box-shadow: 1px 1px 1px #000;
+  border: none;
+  border-radius: 1px;
+}
+
+.moviePageCollectionSubmit:hover {
+  background: #5e9093;
+  box-shadow: none;
 }
 
 @media only screen and (max-width: 600px) {

@@ -6,33 +6,13 @@
   </div>
   <div class="moviePageBox">
     <p class="searchAgain" ui-sref="searchpage">Search Again <i class="fa fa-search" aria-hidden="true"></i></p>
+    <!-- <button class="btn" ng-click="$ctrl.deleteMovie()">DELETE</button> -->
     <h1 ng-model="$ctrl.newMovie.title" class="moviePageTitle">{{info.title}}</h1>
     <h4 class="moviePageTagline">{{info.tagline}}</h4>
     <img class="moviePagePoster" src="http://image.tmdb.org/t/p/w185/{{info.poster_path}}" />
     <h4 class="moviePageDescriptionTitle">Plot Summary:</h4>
     <p class="moviePageDescription">{{info.overview}}</p>
-    <button ng-click="$ctrl.addToCollection(); ratings = !ratings" class="moviePageButtonCollection"><i class="fa fa-plus" aria-hidden="true"></i>  Add to collection</button>
-    <div ng-show="ratings" class="moviePageCollectionBox">
-      <p class="ratingLabel">
-        Rate This Movie:
-      </p>
-      <div class="stars">
-        <form action="">
-          <input ng-click="$ctrl.clicked5()" class="star star-5" id="star-5" type="radio" name="star" />
-          <label class="star star-5" for="star-5"></label>
-          <input ng-click="$ctrl.clicked4()" class="star star-4" id="star-4" type="radio" name="star" />
-          <label class="star star-4" for="star-4"></label>
-          <input ng-click="$ctrl.clicked3()" class="star star-3" id="star-3" type="radio" name="star" />
-          <label class="star star-3" for="star-3"></label>
-          <input ng-click="$ctrl.clicked2()" class="star star-2" id="star-2" type="radio" name="star" />
-          <label class="star star-2" for="star-2"></label>
-          <input ng-click="$ctrl.clicked1()" class="star star-1" id="star-1" type="radio" name="star" />
-          <label class="star star-1" for="star-1"></label>
-        </form>
-      </div>
-
-      <button class="moviePageCollectionSubmit" ng-click="$ctrl.getMovieRating()">Submit</button>
-    </div>
+    <button ng-click="$ctrl.addToCollection()" class="moviePageButtonCollection" data-toggle="modal" data-target="#collectionModal"><i class="fa fa-plus" aria-hidden="true"></i>  Add to collection</button>
 
     <button ng-click="$ctrl.addToWatchList()" class="moviePageButtonWatchList" data-toggle="modal" data-target="#watchListModal"><i class="fa fa-eye" aria-hidden="true"></i>  Add to watchlist</button>
 
@@ -40,7 +20,7 @@
       <div class="modal-dialog modalBox">
 
         <!-- Modal content-->
-        <div class="modal-content modalBody">
+        <div class="modal-content moviePageModalBody">
           <div class="modal-header">
             <h4 class="modal-title">Add To Watchlist</h4>
             <button type="button" class="close closeModal" data-dismiss="modal">x</button>
@@ -61,17 +41,31 @@
       <div class="modal-dialog modalBox">
 
         <!-- Modal content-->
-        <div class="modal-content modalBody">
+        <div class="modal-content moviePageModalBody">
           <div class="modal-header">
             <h4 class="modal-title">Add To Collection</h4>
             <button type="button" class="close closeModal" data-dismiss="modal">x</button>
           </div>
-          <div class="modal-body moviePageModal">
-            <h4>Are You Sure?</h4>
-            <div class="modalConfirmationButtons">
-              <button class="btn confirmationButtonsYes">Yes</button>
-              <button data-dismiss="modal" class="btn confirmationButtonsNo">No</button>
+          <div class="moviePageCollectionBox">
+            <p class="ratingLabel">
+              Please Rate This Movie:
+            </p>
+            <div class="stars">
+              <form action="">
+                <input ng-model="$ctrl.movieRating" class="star star-5" id="star-5" type="radio" name="star" value=5 />
+                <label class="star star-5" for="star-5"></label>
+                <input ng-model="$ctrl.movieRating" class="star star-4" id="star-4" type="radio" name="star" value=4 />
+                <label class="star star-4" for="star-4"></label>
+                <input ng-model="$ctrl.movieRating" class="star star-3" id="star-3" type="radio" name="star" value=3 />
+                <label class="star star-3" for="star-3"></label>
+                <input ng-model="$ctrl.movieRating" class="star star-2" id="star-2" type="radio" name="star" value=2 />
+                <label class="star star-2" for="star-2"></label>
+                <input ng-model="$ctrl.movieRating" class="star star-1" id="star-1" type="radio" name="star" value=1 />
+                <label class="star star-1" for="star-1"></label>
+              </form>
             </div>
+
+            <button class="moviePageCollectionSubmit" ng-click="$ctrl.getMovieRating()" data-dismiss="modal">Submit</button>
           </div>
         </div>
 

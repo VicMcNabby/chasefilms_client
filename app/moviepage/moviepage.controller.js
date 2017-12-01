@@ -5,6 +5,8 @@
 
   function MoviePageController($http, MovieService) {
     const vm = this
+    const moviesURL = 'https://chasefilms.herokuapp.com/api/v1/movies'
+    const collectionURL = 'https://chasefilms.herokuapp.com/api/v1/user_movies'
     vm.$onInit = function() {
 
       vm.service = MovieService
@@ -27,28 +29,50 @@
       vm.videos = []
     }
 
-    vm.clicked5 = function() {
-      vm.movieRating = 5
-    }
+    vm.addToCollection = function() {
 
-    vm.clicked4 = function() {
-      vm.movieRating = 4
-    }
-
-    vm.clicked3 = function() {
-      vm.movieRating = 3
-    }
-    vm.clicked2 = function() {
-      vm.movieRating = 2
-    }
-
-    vm.clicked1 = function() {
-      vm.movieRating = 1
+      const movieInfo = {
+        "title": vm.movie.data.title,
+        "poster_url": vm.movie.data.poster_path,
+        "overview": vm.movie.data.overview,
+        "tagline": vm.movie.data.tagline,
+        "movie_db_id": vm.movie.data.id
+      }
+      console.log('collection pushed');
+      $http.post(moviesURL, movieInfo)
+        .then(result => {
+          console.log('new movie sent!');
+        })
     }
 
     vm.getMovieRating = function() {
-      console.log(vm.movieRating);
-      console.log(vm.movie.data.title);
+      console.log('rated ', vm.movieRating, ' stars');
+
+      const collectionInfo = {
+        "users_id": 1,
+        "moviedb_id": vm.movie.data.id,
+        "watched": "yes",
+        "rating": vm.movieRating,
+        "want_to_watch": ''
+      }
+
+      $http.post(collectionURL, collectionInfo, {
+          headers: {
+            "content-type": "application/json"
+          }
+        })
+        .then(result => {
+          console.log('user movie sent!');
+        })
+
+      vm.movieRating = ''
+    }
+
+    vm.deleteMovie = function() {
+      $http.delete('https://chasefilms.herokuapp.com/api/v1/user_movies/6')
+        .then(result => {
+          console.log('deleted');
+        })
     }
 
   }
