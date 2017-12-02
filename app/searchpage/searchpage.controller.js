@@ -9,12 +9,14 @@
 
       vm.findMovies = function() {
         let searchTerm = vm.searchTerm
+        vm.showLoading = true;
 
         $http.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie/?query=${searchTerm}&api_key=82c848f0d12aeb177346f899a7979c65`)
           .then(results => {
             console.log(results);
             vm.movies = results.data.results
             let movies = vm.movies
+            vm.showLoading = false;
 
             movies.map(movie => {
               if (movie.poster_path) {

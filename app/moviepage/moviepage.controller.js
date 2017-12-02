@@ -29,7 +29,7 @@
       vm.videos = []
     }
 
-    vm.addToCollection = function() {
+    vm.addToDatabase = function() {
 
       const movieInfo = {
         "title": vm.movie.data.title,
@@ -41,7 +41,7 @@
       console.log('collection pushed');
       $http.post(moviesURL, movieInfo)
         .then(result => {
-          console.log('new movie sent!');
+          console.log('new movie sent to database');
         })
     }
 
@@ -49,7 +49,7 @@
       console.log('rated ', vm.movieRating, ' stars');
 
       const collectionInfo = {
-        "users_id": 1,
+        "users_id": localStorage.user_id,
         "moviedb_id": vm.movie.data.id,
         "watched": "yes",
         "rating": vm.movieRating,
@@ -63,13 +63,30 @@
         })
         .then(result => {
           console.log('user movie sent!');
+          console.log(collectionInfo);
         })
 
       vm.movieRating = ''
     }
 
+    vm.addToWatchList = function() {
+
+      const watchInfo = {
+        "users_id": localStorage.user_id,
+        "moviedb_id": vm.movie.data.id,
+        "watched": "",
+        "rating": vm.movieRating,
+        "want_to_watch": "yes"
+      }
+      $http.post(collectionURL, watchInfo)
+        .then(result => {
+          console.log('movie sent to watchlist');
+        })
+
+    }
+
     vm.deleteMovie = function() {
-      $http.delete('https://chasefilms.herokuapp.com/api/v1/user_movies/6')
+      $http.delete('https://chasefilms.herokuapp.com/api/v1/movies/2')
         .then(result => {
           console.log('deleted');
         })

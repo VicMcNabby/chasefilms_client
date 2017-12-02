@@ -132,17 +132,46 @@
 .searchAgain {
   border: 1px solid #888;
   box-shadow: 2px 2px 3px #000;
-  padding: 1px 7px 1px 7px;
-  color: #fff;
-  background: #16385b;
-  text-shadow: 1px 1px 2px #000;
+  padding: 3px 10px 3px 10px;
+  color: #000;
+  background: #D9DD92;
   border-radius: 2px;
   font-family: 'Oswald', sans-serif;
-  margin-left: 175%;
-  min-width: 120px;
+  margin-left: 178%;
   text-align: center;
   margin-top: 10px;
   cursor: pointer;
+}
+
+button.searchAgain:hover {
+  background: #c3c683;
+}
+
+.menuMoviePage {
+  width: 0px;
+  height: 25vh;
+  margin-top: 7%;
+  border-radius: 2px;
+  padding-top: 10px;
+  box-shadow: 2px 2px 4px #000;
+  background: linear-gradient(90deg, #D9DD92, #c3c683);
+  position: fixed;
+  right: 0;
+  border: none;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.menuMoviePage.is-visible {
+  width: 220px;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  z-index: 6;
 }
 
 .searchAgain:hover {

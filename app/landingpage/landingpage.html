@@ -26,12 +26,12 @@
       <div class="modal-body">
         <form class="modalForm">
           <label>Email:
-          <input class="modalInput" type="email" />
+          <input ng-model="$ctrl.email" class="modalInput" type="email" />
           </label>
           <label>Password:
-          <input class="modalInput" type="password" />
+          <input ng-model="$ctrl.password" class="modalInput" type="password" />
           </label>
-          <input type="submit" class="btn btn-primary submitButton" />
+          <input ng-click="$ctrl.logInUser()" type="submit" class="btn btn-primary submitButton" />
         </form>
       </div>
     </div>

@@ -1,7 +1,12 @@
 <div class="searchPage">
-  <p class="logOut" ui-sref="home">
-    Log Out
-  </p>
+  <button class="sideMenuButtonSearchPage" ng-click="visible=!visible;">Menu</button>
+  <div ng-class="{'is-visible':visible}" class="menuSearchPage">
+    <ul>
+      <li ui-sref="collectionpage">My Collection</li>
+      <li>Watch List</li>
+      <li ui-sref="home">Log Out</li>
+    </ul>
+  </div>
   <div class="searchImage">
     <img class="chaseFilmStrip" src="app/images/CFStrip.png" />
     <div class="searchPageInput">
@@ -15,14 +20,14 @@
 
     </div>
   </div>
+  <p class="loadingMessage" ng-show="$ctrl.showLoading">
+    Finding Movies...
+  </p>
+
   <div class="movieResultsSection">
-    <div ng-click="$ctrl.getInfo(movie)" class="container movieResults col-sm-4 col-md-3" ng-repeat="movie in $ctrl.movies" ui-sref="moviepage">
-      <div class="movieBox">
-        <h4 class="movieTitle">{{movie.title}}</h4>
+    <div ng-hide="$ctrl.showLoading" class="movieSearchSection">
+      <div class="searchColumns" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies" ui-sref="moviepage">
         <img class="moviePoster" src={{movie.poster_path}} />
-        <p class="movieDescription">
-          {{movie.overview}}
-        </p>
       </div>
     </div>
   </div>

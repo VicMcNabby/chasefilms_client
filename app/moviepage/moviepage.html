@@ -5,16 +5,24 @@
       <a class="movieLink" href="https://www.youtube.com/watch?v={{video.key}}" target="_blank"> {{video.name}} </a></h4>
   </div>
   <div class="moviePageBox">
-    <p class="searchAgain" ui-sref="searchpage">Search Again <i class="fa fa-search" aria-hidden="true"></i></p>
+    <button class="searchAgain" ng-click="visible=!visible;">Menu</button>
+    <div ng-class="{'is-visible':visible}" class="menuMoviePage">
+      <ul>
+        <li ui-sref="searchpage">Search</li>
+        <li ui-sref="collectionpage">My Collection</li>
+        <li>Watch List</li>
+        <li ui-sref="home">Log Out</li>
+      </ul>
+    </div>
     <!-- <button class="btn" ng-click="$ctrl.deleteMovie()">DELETE</button> -->
     <h1 ng-model="$ctrl.newMovie.title" class="moviePageTitle">{{info.title}}</h1>
     <h4 class="moviePageTagline">{{info.tagline}}</h4>
     <img class="moviePagePoster" src="http://image.tmdb.org/t/p/w185/{{info.poster_path}}" />
     <h4 class="moviePageDescriptionTitle">Plot Summary:</h4>
     <p class="moviePageDescription">{{info.overview}}</p>
-    <button ng-click="$ctrl.addToCollection()" class="moviePageButtonCollection" data-toggle="modal" data-target="#collectionModal"><i class="fa fa-plus" aria-hidden="true"></i>  Add to collection</button>
+    <button ng-click="$ctrl.addToDatabase()" class="moviePageButtonCollection" data-toggle="modal" data-target="#collectionModal"><i class="fa fa-plus" aria-hidden="true"></i>  Add to collection</button>
 
-    <button ng-click="$ctrl.addToWatchList()" class="moviePageButtonWatchList" data-toggle="modal" data-target="#watchListModal"><i class="fa fa-eye" aria-hidden="true"></i>  Add to watchlist</button>
+    <button ng-click="$ctrl.addToDatabase()" class="moviePageButtonWatchList" data-toggle="modal" data-target="#watchListModal"><i class="fa fa-eye" aria-hidden="true"></i>  Add to watchlist</button>
 
     <div class="modal fade" id="watchListModal" role="dialog">
       <div class="modal-dialog modalBox">
@@ -28,7 +36,7 @@
           <div class="modal-body moviePageModal">
             <h4>Are You Sure?</h4>
             <div class="modalConfirmationButtons">
-              <button class="btn confirmationButtonsYes">Yes</button>
+              <button ng-click="$ctrl.addToWatchList()" class="btn confirmationButtonsYes" data-dismiss="modal">Yes</button>
               <button data-dismiss="modal" class="btn confirmationButtonsNo">No</button>
             </div>
           </div>

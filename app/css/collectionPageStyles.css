@@ -1,0 +1,121 @@
+.collectionPage {
+  min-height: 100vh;
+  height: 100%;
+  border-radius: 3px;
+  margin: 2%;
+  border: 1px solid #999;
+  box-shadow: 3px 3px 5px #333;
+  padding: 5px;
+  background: linear-gradient(90deg, #96ccb5, #61a085, #3e6577);
+}
+
+.collectionHeader {
+  font-family: 'Oswald', sans-serif;
+  margin-left: 15px;
+}
+
+.loadingMessageCollection {
+  font-family: 'Comfortaa', sans-serif;
+  align-items: center;
+  text-align: center;
+  margin-top: 15%;
+  font-size: 20px;
+}
+
+.movieCollectionSection {
+  max-width: 100vw;
+  padding-left: 15px;
+}
+
+.movieColumns {
+  display: inline-block;
+  margin: 0px 4px 0px 4px;
+}
+
+.movieCollectionPoster {
+  width: 180px;
+  height: 250px;
+  box-shadow: 2px 2px 2px #000;
+  border: 1px solid #999;
+  margin-bottom: 15px;
+}
+
+/*////////////////////*/
+
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+li {
+  letter-spacing: 2px;
+  padding: 2px 2px;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+}
+
+li:hover {
+  font-weight: bolder;
+}
+
+.menu {
+  width: 0px;
+  height: 20vh;
+  margin-top: 7%;
+  border-radius: 2px;
+  padding-top: 10px;
+  box-shadow: 2px 2px 4px #000;
+  background: linear-gradient(90deg, #dfffad, #f5ffe5);
+  position: fixed;
+  right: 0;
+  border: none;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.menu.is-visible {
+  width: 220px;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  z-index: 6;
+}
+
+.sideMenuButton {
+  margin-bottom: 0;
+  margin-top: 18px;
+  margin-left: 87%;
+  margin-right: 2%;
+  border-radius: 2px;
+  padding: 3px 6px 3px 6px;
+  box-shadow: 1px 1px 2px #000;
+  color: #000;
+  background: #dfffad;
+  text-align: center;
+  font-family: 'Nova Flat', sans-serif;
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 500px) {
+  .sideMenuButton {
+    margin-left: 75%;
+  }
+  .movieColumns {
+    display: inline-block;
+    margin: 0px 4px 0px 4px;
+    padding-left: 35px;
+  }
+  .movieCollectionPoster {
+    width: 230px;
+    height: 350px;
+  }
+  .menu {
+    margin-top: 20%;
+  }
+}

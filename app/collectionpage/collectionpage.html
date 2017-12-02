@@ -1,0 +1,20 @@
+<div class="collectionPage">
+  <button class="sideMenuButton" ng-click="visible=!visible;">Menu</button>
+  <div ng-class="{'is-visible':visible}" class="menu">
+    <ul>
+      <li ui-sref="searchpage">Search</li>
+      <li>Watch List</li>
+      <li ui-sref="home">Log Out</li>
+    </ul>
+  </div>
+
+  <h2 class="collectionHeader">My Collection</h2>
+  <p class="loadingMessageCollection" ng-show="$ctrl.showLoading">
+    Getting Your Collection...
+  </p>
+  <div ng-hide="$ctrl.showLoading" class="movieCollectionSection">
+    <div class="movieColumns" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies" ui-sref="moviepage">
+      <img class="movieCollectionPoster" src={{movie.poster_url}} />
+    </div>
+  </div>
+</div>
