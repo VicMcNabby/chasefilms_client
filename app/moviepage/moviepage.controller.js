@@ -86,10 +86,14 @@
     }
 
     vm.deleteMovie = function() {
-      $http.delete('https://chasefilms.herokuapp.com/api/v1/movies/2')
+      $http.delete('https://chasefilms.herokuapp.com/api/v1/user_movies/34')
         .then(result => {
           console.log('deleted');
         })
+    }
+
+    vm.logOut = function() {
+      localStorage.clear();
     }
 
   }

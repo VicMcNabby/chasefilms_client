@@ -41,5 +41,9 @@
       vm.service.movieId = movie.id
     }
 
+    vm.logOut = function() {
+      localStorage.clear();
+    }
+
   }
 }());

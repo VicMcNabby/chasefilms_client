@@ -11,10 +11,10 @@
         <li ui-sref="searchpage">Search</li>
         <li ui-sref="collectionpage">My Collection</li>
         <li>Watch List</li>
-        <li ui-sref="home">Log Out</li>
+        <li ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
       </ul>
     </div>
-    <!-- <button class="btn" ng-click="$ctrl.deleteMovie()">DELETE</button> -->
+    <button class="btn" ng-click="$ctrl.deleteMovie()">DELETE</button>
     <h1 ng-model="$ctrl.newMovie.title" class="moviePageTitle">{{info.title}}</h1>
     <h4 class="moviePageTagline">{{info.tagline}}</h4>
     <img class="moviePagePoster" src="http://image.tmdb.org/t/p/w185/{{info.poster_path}}" />
