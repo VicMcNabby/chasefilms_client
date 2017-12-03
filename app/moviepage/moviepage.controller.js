@@ -5,6 +5,8 @@
 
   function MoviePageController($http, MovieService) {
     const vm = this
+    let user = localStorage.user_id
+    const myCollectionURL = `https://chasefilms.herokuapp.com/api/v1/users/${user}/movies/watched`
     const moviesURL = 'https://chasefilms.herokuapp.com/api/v1/movies'
     const collectionURL = 'https://chasefilms.herokuapp.com/api/v1/user_movies'
     vm.$onInit = function() {
@@ -17,10 +19,15 @@
       }
 
       let movieId = vm.service.movieId
+      vm.notInCollection = true
       console.log(movieId);
       $http.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=82c848f0d12aeb177346f899a7979c65&append_to_response=videos`)
         .then(results => {
           console.log(results);
+          // $http.get(myCollectionURL)
+          //   .then(collection => {
+          //     console.log(collection);
+          //   })
           vm.movie = results
           vm.videos = results.data.videos.results
 
@@ -84,6 +91,7 @@
         })
 
     }
+
 
     vm.deleteMovie = function() {
       $http.delete('https://chasefilms.herokuapp.com/api/v1/user_movies/34')

@@ -20,6 +20,9 @@
       }).state('collectionpage', {
         url: '/collectionpage',
         component: 'collectionpage'
+      }).state('watchlist', {
+        url: '/watchlist',
+        component: 'watchlist'
       })
 
     $urlServiceProvider.rules.otherwise({

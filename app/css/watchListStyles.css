@@ -1,4 +1,4 @@
-.collectionPage {
+.watchListPage {
   min-height: 100vh;
   height: 100%;
   border-radius: 3px;
@@ -9,7 +9,7 @@
   background: linear-gradient(90deg, #96ccb5, #61a085, #3e6577);
 }
 
-.collectionPageInput {
+.collectionPageInputWL {
   border-radius: 1px;
   margin-left: 40%;
   width: 160px;
@@ -21,18 +21,14 @@
   box-shadow: 1px 1px 2px #000;
 }
 
-.collectionLogo {
-  max-width: 120px;
-}
-
-.collectionInputBar {
+.collectionInputBarWL {
   width: 150px;
   padding-left: 5px;
   border-radius: 2px;
   border-bottom: 1px solid black;
 }
 
-.collectionHeader {
+.collectionHeaderWL {
   font-family: 'Oswald', sans-serif;
   margin-left: 15px;
   color: #fdfffc;
@@ -42,7 +38,7 @@
   width: 92vw;
 }
 
-.loadingMessageCollection {
+.loadingMessageCollectionWL {
   font-family: 'Comfortaa', sans-serif;
   align-items: center;
   text-align: center;
@@ -50,18 +46,18 @@
   font-size: 20px;
 }
 
-.movieCollectionSection {
+.movieCollectionSectionWL {
   max-width: 100vw;
   padding-left: 15px;
   padding-right: 10px;
 }
 
-.movieColumns {
+.movieColumnsWL {
   display: inline-block;
   margin: 0px 4px 0px 4px;
 }
 
-.movieCollectionPoster {
+.movieCollectionPosterWL {
   width: 180px;
   height: 250px;
   box-shadow: 2px 2px 2px #000;
@@ -69,7 +65,7 @@
   margin-bottom: 15px;
 }
 
-.addFirstMovie {
+.addFirstMovieWL {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,12 +80,12 @@
   background: #d4e7f4;
 }
 
-.firstMovieText {
+.firstMovieTextWL {
   text-align: center;
   font-family: "Oswald", serif;
 }
 
-.movieBox {
+.movieBoxWL {
   border-bottom: 2px solid #3c596d;
   padding-top: 10px;
   margin-bottom: 15px;
@@ -113,7 +109,7 @@ li:hover {
   font-weight: bolder;
 }
 
-.menu {
+.menuWL {
   width: 0px;
   height: 20vh;
   margin-top: 7%;
@@ -131,7 +127,7 @@ li:hover {
   overflow: hidden;
 }
 
-.menu.is-visible {
+.menuWL.is-visible {
   width: 220px;
   -webkit-transition: width 0.5s ease-in-out;
   -moz-transition: width 0.5s ease-in-out;
@@ -140,7 +136,7 @@ li:hover {
   z-index: 6;
 }
 
-.sideMenuButton {
+.sideMenuButtonWL {
   margin-bottom: 0;
   margin-top: 18px;
   margin-left: 87%;
@@ -157,16 +153,6 @@ li:hover {
   z-index: 2;
 }
 
-.fa-star {
-  color: #f9ff8c;
-  text-shadow: 0 0 10px #333;
-  margin: 2px;
-}
-
-.starHeader {
-  margin-left: 25px;
-}
-
 @media only screen and (max-width: 850px) {
   .sideMenuButton {
     margin-left: 83%;
@@ -174,22 +160,22 @@ li:hover {
 }
 
 @media only screen and (max-width: 500px) {
-  .sideMenuButton {
+  .sideMenuButtonWL {
     margin-left: 75%;
   }
-  .movieColumns {
+  .movieColumnsWL {
     display: inline-block;
     margin: 0px 4px 0px 4px;
     padding-left: 35px;
   }
-  .movieCollectionPoster {
+  .movieCollectionPosterWL {
     width: 230px;
     height: 350px;
   }
-  .menu {
+  .menuWL {
     margin-top: 20%;
   }
-  .collectionPageInput {
+  .collectionPageInputWL {
     margin-left: 25%;
   }
 }

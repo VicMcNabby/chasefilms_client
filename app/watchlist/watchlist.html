@@ -1,0 +1,34 @@
+<div class="watchListPage">
+  <button class="sideMenuButtonWL" ng-click="visible=!visible;">Menu</button>
+  <div ng-class="{'is-visible':visible}" class="menu">
+    <ul>
+      <li ui-sref="searchpage">Search</li>
+      <li ui-sref="collectionpage">Collection Page</li>
+      <li ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
+    </ul>
+  </div>
+  <div class="collectionPageInputWL">
+    <input class="collectionInputBarWL" ng-model="collectionSearch.title" type="text" placeholder="Find movie...">
+  </div>
+
+  <h2 class="collectionHeaderWL">My Watch List</h2>
+  <p class="loadingMessageCollectionWL" ng-show="$ctrl.showLoading">
+    Getting Your Watch List...
+  </p>
+
+  <div ng-hide="$ctrl.showLoading" class="movieCollectionSection">
+    <div ng-show="$ctrl.noMovies" class="addFirstMovieWL" ui-sref="searchpage">
+      <h3 class="firstMovieTextWL">
+        Add your first movie
+      </h3>
+      <i class="fa fa-plus fa-5x"></i>
+    </div>
+
+    <div class="movieBoxWL">
+      <div class="movieColumnsWL" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
+        <img class="movieCollectionPosterWL" src={{movie.poster_url}} />
+      </div>
+    </div>
+
+  </div>
+</div>

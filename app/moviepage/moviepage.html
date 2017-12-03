@@ -10,7 +10,7 @@
       <ul>
         <li ui-sref="searchpage">Search</li>
         <li ui-sref="collectionpage">My Collection</li>
-        <li>Watch List</li>
+        <li ui-sref="watchlist">Watch List</li>
         <li ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
       </ul>
     </div>
@@ -20,7 +20,7 @@
     <img class="moviePagePoster" src="http://image.tmdb.org/t/p/w185/{{info.poster_path}}" />
     <h4 class="moviePageDescriptionTitle">Plot Summary:</h4>
     <p class="moviePageDescription">{{info.overview}}</p>
-    <button ng-click="$ctrl.addToDatabase()" class="moviePageButtonCollection" data-toggle="modal" data-target="#collectionModal"><i class="fa fa-plus" aria-hidden="true"></i>  Add to collection</button>
+    <button ng-click="$ctrl.addToDatabase()" ng-show="$ctrl.notInCollection" class="moviePageButtonCollection" data-toggle="modal" data-target="#collectionModal"><i class="fa fa-plus" aria-hidden="true"></i>  Add to collection</button>
 
     <button ng-click="$ctrl.addToDatabase()" class="moviePageButtonWatchList" data-toggle="modal" data-target="#watchListModal"><i class="fa fa-eye" aria-hidden="true"></i>  Add to watchlist</button>
 
