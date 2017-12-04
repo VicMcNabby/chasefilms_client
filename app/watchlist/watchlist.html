@@ -1,6 +1,6 @@
 <div class="watchListPage">
   <button class="sideMenuButtonWL" ng-click="visible=!visible;">Menu</button>
-  <div ng-class="{'is-visible':visible}" class="menu">
+  <div ng-class="{'is-visible':visible}" class="menuWL">
     <ul>
       <li ui-sref="searchpage">Search</li>
       <li ui-sref="collectionpage">Collection Page</li>
@@ -10,24 +10,65 @@
   <div class="collectionPageInputWL">
     <input class="collectionInputBarWL" ng-model="collectionSearch.title" type="text" placeholder="Find movie...">
   </div>
-
-  <h2 class="collectionHeaderWL">My Watch List</h2>
+  <div class="logoBox">
+    <img class="watchListLogo" src="app/images/CFWatchLogo.png" />
+  </div>
+  <!-- <h2 class="collectionHeaderWL">My Watch List</h2> -->
   <p class="loadingMessageCollectionWL" ng-show="$ctrl.showLoading">
     Getting Your Watch List...
   </p>
 
   <div ng-hide="$ctrl.showLoading" class="movieCollectionSection">
-    <div ng-show="$ctrl.noMovies" class="addFirstMovieWL" ui-sref="searchpage">
-      <h3 class="firstMovieTextWL">
-        Add your first movie
-      </h3>
-      <i class="fa fa-plus fa-5x"></i>
-    </div>
 
     <div class="movieBoxWL">
-      <div class="movieColumnsWL" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
-        <img class="movieCollectionPosterWL" src={{movie.poster_url}} />
+      <div ng-show="$ctrl.noMovies" class="addFirstMovieWL" ui-sref="searchpage">
+        <h3 class="firstMovieTextWL">
+          Add your first movie
+        </h3>
+        <i class="fa fa-plus fa-5x"></i>
       </div>
+      <div class="movieColumnsWL" ng-repeat="movie in $ctrl.movies | filter: collectionSearch">
+        <div class="watchListBox">
+          <img class="movieCollectionPosterWL" ng-click="$ctrl.getInfo(movie)" src={{movie.poster_url}} ui-sref="moviepage" />
+          <i ng-click="$ctrl.getMovieInfo(movie)" class="fa fa-plus watchedIcon" data-toggle="modal" data-target="#collectionModal"></i>
+        </div>
+      </div>
+
+      <div class="modal fade" id="collectionModal" role="dialog">
+        <div class="modal-dialog modalBox">
+
+          <!-- Modal content-->
+          <div class="modal-content moviePageModalBody">
+            <div class="modal-header">
+              <h4 class="modal-title">Add To Collection</h4>
+              <button type="button" class="close closeModal" data-dismiss="modal">x</button>
+            </div>
+            <div class="moviePageCollectionBox">
+              <p class="ratingLabel">
+                Please Rate This Movie:
+              </p>
+              <div class="stars">
+                <form action="">
+                  <input ng-model="$ctrl.movieRating" class="star star-5" id="star-5" type="radio" name="star" value=5 />
+                  <label class="star star-5" for="star-5"></label>
+                  <input ng-model="$ctrl.movieRating" class="star star-4" id="star-4" type="radio" name="star" value=4 />
+                  <label class="star star-4" for="star-4"></label>
+                  <input ng-model="$ctrl.movieRating" class="star star-3" id="star-3" type="radio" name="star" value=3 />
+                  <label class="star star-3" for="star-3"></label>
+                  <input ng-model="$ctrl.movieRating" class="star star-2" id="star-2" type="radio" name="star" value=2 />
+                  <label class="star star-2" for="star-2"></label>
+                  <input ng-model="$ctrl.movieRating" class="star star-1" id="star-1" type="radio" name="star" value=1 />
+                  <label class="star star-1" for="star-1"></label>
+                </form>
+              </div>
+
+              <button class="moviePageCollectionSubmit" ng-click="$ctrl.watchedMovie()" data-dismiss="modal">Submit</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
   </div>

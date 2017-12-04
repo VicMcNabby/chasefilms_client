@@ -5,11 +5,12 @@
 
   function WatchListController($http, MovieService) {
     const vm = this
+    let user = localStorage.user_id
 
     vm.showLoading = true;
 
     vm.$onInit = function() {
-      let user = localStorage.user_id
+
       const myWatchListURL = `https://chasefilms.herokuapp.com/api/v1/users/${user}/movies/want_to_watch`
 
       $http.get(myWatchListURL)
@@ -46,6 +47,33 @@
 
     vm.logOut = function() {
       localStorage.clear();
+    }
+
+    vm.getMovieInfo = function(movie) {
+      console.log(movie);
+      let movieInfo = movie
+
+
+      vm.watchedMovie = function(movie) {
+
+        let updateInfo = {
+          "users_id": localStorage.user_id,
+          "moviedb_id": movieInfo.movie_db_id,
+          "watched": "yes",
+          "rating": vm.movieRating,
+          "want_to_watch": ''
+        }
+
+        let movieId = movieInfo.id
+        console.log(updateInfo);
+
+        let collectionUpdateURL = `https://chasefilms.herokuapp.com/api/v1/user_movies/${movieId}`
+        $http.put(collectionUpdateURL, updateInfo)
+          .then(result => {
+            window.location.reload();
+          })
+
+      }
     }
 
   }

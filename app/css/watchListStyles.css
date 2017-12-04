@@ -6,19 +6,20 @@
   border: 1px solid #999;
   box-shadow: 3px 3px 5px #333;
   padding: 5px;
-  background: linear-gradient(90deg, #96ccb5, #61a085, #3e6577);
+  background: linear-gradient(90deg, #5F6062, #8b8d93);
 }
 
 .collectionPageInputWL {
   border-radius: 1px;
-  margin-left: 40%;
+  /*margin-left: 40%;*/
   width: 160px;
   font-family: 'Nova Flat', sans-serif;
-  padding: 3px;
-  background: #b5d18a;
+  padding: 2px 0px 3px 4.5px;
+  background: #E8D6CB;
   border-radius: 2px;
-  border: 1px solid black;
-  box-shadow: 1px 1px 2px #000;
+  /*border: 1px solid black;*/
+  box-shadow: 1px 1px 1px #000;
+  position: absolute;
 }
 
 .collectionInputBarWL {
@@ -28,13 +29,25 @@
   border-bottom: 1px solid black;
 }
 
+.logoBox {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.watchListLogo {
+  width: 250px;
+  margin: auto;
+}
+
 .collectionHeaderWL {
   font-family: 'Oswald', sans-serif;
   margin-left: 15px;
   color: #fdfffc;
   text-shadow: 0px 0px 3px #000;
   padding: 5px;
-  border-bottom: 2px solid #3c596d;
+  border-bottom: 2px solid #C9DCB3;
   width: 92vw;
 }
 
@@ -86,9 +99,34 @@
 }
 
 .movieBoxWL {
-  border-bottom: 2px solid #3c596d;
-  padding-top: 10px;
+  border-bottom: 5px double #C9DCB3;
+  border-top: 5px double #C9DCB3;
+  padding-top: 25px;
   margin-bottom: 15px;
+}
+
+.watchListBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.watchedIcon {
+  color: #000;
+  position: relative;
+  left: 150px;
+  bottom: 42px;
+  z-index: 2;
+  padding: 1px;
+  width: 20px;
+  border-radius: 2px;
+  background: #F3C969;
+  text-align: center;
+  box-shadow: 2px 2px 3px #000;
+}
+
+.watchedIcon:hover {
+  box-shadow: 1px 1px 1px #000;
+  background: #b29145;
 }
 
 /*////////////////////*/
@@ -116,7 +154,7 @@ li:hover {
   border-radius: 2px;
   padding-top: 10px;
   box-shadow: 2px 2px 4px #000;
-  background: linear-gradient(90deg, #dfffad, #f5ffe5);
+  background: linear-gradient(90deg, #d9eac7, #a4b78f);
   position: fixed;
   right: 0;
   border: none;
@@ -145,7 +183,7 @@ li:hover {
   padding: 3px 6px 3px 6px;
   box-shadow: 1px 1px 2px #000;
   color: #000;
-  background: #dfffad;
+  background: #C9DCB3;
   text-align: center;
   font-family: 'Nova Flat', sans-serif;
   cursor: pointer;
@@ -153,8 +191,13 @@ li:hover {
   z-index: 2;
 }
 
+.sideMenuButtonWL:hover {
+  background: #deedce;
+  box-shadow: 0px 0px 1px #000;
+}
+
 @media only screen and (max-width: 850px) {
-  .sideMenuButton {
+  .sideMenuButtonWL {
     margin-left: 83%;
   }
 }
@@ -177,5 +220,8 @@ li:hover {
   }
   .collectionPageInputWL {
     margin-left: 25%;
+  }
+  .watchedIcon {
+    left: 200px;
   }
 }

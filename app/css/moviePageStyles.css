@@ -284,6 +284,35 @@ button.searchAgain:hover {
   box-shadow: none;
 }
 
+.moviePageInfoBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.moviePageDataBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.moviePageInfoDescription {
+  text-align: center;
+  width: 95%;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 2px;
+  padding: 5px 10px 5px 30px;
+  text-shadow: 1px 1px 1px black;
+  margin-bottom: 0px;
+}
+
+.moviePageInfoTitle {
+  text-align: center;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px 1px #222;
+}
+
 @media only screen and (max-width: 600px) {
   .moviePage {
     flex-direction: column;
