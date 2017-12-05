@@ -242,6 +242,16 @@ body {
     font-size: 24px;
   }
   .signUpTicket {
+    height: 165px;
+    width: 165px;
+  }
+  .projector {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-height: 1200px) {
+  .signUpTicket {
     height: 225px;
     width: 225px;
   }
