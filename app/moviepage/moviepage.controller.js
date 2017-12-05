@@ -4,16 +4,17 @@
     .controller('MoviePageController', MoviePageController)
 
   function MoviePageController($http, MovieService) {
+
     const vm = this
     let user = localStorage.user_id
     const userMoviesURL = `https://chasefilms.herokuapp.com/api/v1/users/${user}/movies/`
     const moviesURL = 'https://chasefilms.herokuapp.com/api/v1/movies'
     const collectionURL = 'https://chasefilms.herokuapp.com/api/v1/user_movies'
+
     vm.$onInit = function() {
 
       vm.service = MovieService
       vm.updateMovieId = updateMovieId
-      vm.showLoading = true
 
       function updateMovieId() {
         vm.service.movieId = vm.movieId
@@ -59,22 +60,17 @@
           }
 
           vm.runtime = timeConvert()
-          console.log(vm.runtime);
 
-
-          console.log(movieId);
           $http.get(userMoviesURL)
             .then(data => {
               vm.movies = data.data
               let movies = vm.movies
-              console.log(data);
 
               movies.map(movie => {
                 if (movie.movie_db_id == movieId) {
                   vm.notInCollection = false
                 }
               })
-              vm.showLoading = false
             })
         })
       vm.movie = []
@@ -90,7 +86,7 @@
         "tagline": vm.movie.data.tagline,
         "movie_db_id": vm.movie.data.id
       }
-      console.log('collection pushed');
+
       $http.post(moviesURL, movieInfo)
         .then(result => {
           console.log('new movie sent to database');
@@ -114,8 +110,6 @@
           }
         })
         .then(result => {
-          console.log('user movie sent!');
-          console.log(collectionInfo);
           window.location = 'collectionpage'
         })
 

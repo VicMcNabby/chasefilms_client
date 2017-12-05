@@ -18,9 +18,6 @@
         <li ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
       </ul>
     </div>
-    <p class="loadingMessage" ng-show="$ctrl.showLoading">
-      Finding Movies...
-    </p>
 
     <!-- //////////////////////
      <button class="btn" ng-click="$ctrl.deleteMovie()">DELETE</button>
@@ -33,18 +30,14 @@
     <div class="moviePageInfoBox">
       <div class="moviePageDataBox">
         <h5 class="moviePageInfoTitle">Release Year:</h5>
-        <p class="moviePageInfoDescription">{{$ctrl.release_date}}</p>
-      </div>
-      <div class="moviePageDataBox">
         <h5 class="moviePageInfoTitle">Budget:</h5>
-        <p class="moviePageInfoDescription">${{$ctrl.budget}}</p>
-      </div>
-      <div class="moviePageDataBox">
         <h5 class="moviePageInfoTitle">Revenue:</h5>
-        <p class="moviePageInfoDescription">${{$ctrl.revenue}}</p>
+        <h5 class="moviePageInfoTitle">Runtime:</h5>
       </div>
       <div class="moviePageDataBox">
-        <h5 class="moviePageInfoTitle">Runtime:</h5>
+        <p class="moviePageInfoDescription">{{$ctrl.release_date}}</p>
+        <p class="moviePageInfoDescription">${{$ctrl.budget}}</p>
+        <p class="moviePageInfoDescription">${{$ctrl.revenue}}</p>
         <p class="moviePageInfoDescription">{{$ctrl.runtime}}</p>
       </div>
     </div>

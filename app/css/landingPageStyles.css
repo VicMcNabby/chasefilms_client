@@ -18,7 +18,6 @@ body {
 
 .landingPageBox {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
@@ -229,5 +228,24 @@ body {
   }
   .modalBox {
     margin-top: 30%;
+  }
+}
+
+@media only screen and (min-height: 100px) {
+  .landingPageBox {
+    margin-top: 25%;
+  }
+  .signUpSlogan {
+    font-size: 40px;
+  }
+  .beginSlogan {
+    font-size: 24px;
+  }
+  .signUpTicket {
+    height: 225px;
+    width: 225px;
+  }
+  .projector {
+    width: 60%;
   }
 }
