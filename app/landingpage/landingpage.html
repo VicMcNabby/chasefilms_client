@@ -1,9 +1,18 @@
 <div class="landingPage">
-  <p class="logIn" data-toggle="modal" data-target="#logInModal"> Log In
+  <button ng-show="$ctrl.alreadyLoggedIn" class="sideMenuButtonSearchPage" ng-click="visible=!visible;">Menu</button>
+  <div ng-show="$ctrl.alreadyLoggedIn" ng-class="{'is-visible':visible}" class="menuMoviePage">
+    <ul>
+      <li ui-sref="searchpage">Search</li>
+      <li ui-sref="collectionpage">My Collection</li>
+      <li ui-sref="watchlist">Watch List</li>
+      <li ui-sref="home" ng-click="$ctrl.logOutLP()">Log Out</li>
+    </ul>
+  </div>
+  <p ng-hide="$ctrl.alreadyLoggedIn" class="logIn" data-toggle="modal" data-target="#logInModal"> Log In
   </p>
   <div class="landingPageBox">
     <img class="projector" src="app/images/CFProjectorBlue.png" ui-sref="searchpage" />
-    <div class="getStartedBox">
+    <div ng-hide="$ctrl.alreadyLoggedIn" class="getStartedBox">
       <h2 class="signUpSlogan">Start your collection now...</h2>
       <img class="signUpTicket" src="app/images/CFTicketGetStarted.png" data-toggle="modal" data-target="#signInModal" />
       <p class="beginSlogan">

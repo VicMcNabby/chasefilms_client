@@ -8,6 +8,16 @@
     const logInURL = "https://chasefilms.herokuapp.com/api/v1/auth/login"
     const newUserURL = "https://chasefilms.herokuapp.com/api/v1/users"
 
+    vm.$onInit = function() {
+
+      vm.alreadyLoggedIn = false
+
+      if (localStorage.token) {
+        vm.alreadyLoggedIn = true
+      }
+    }
+
+
     vm.logInUser = function() {
 
       vm.error = false
@@ -54,6 +64,11 @@
           vm.error = true
         });
 
+    }
+
+    vm.logOutLP = function() {
+      localStorage.clear();
+      window.location.reload();
     }
 
 

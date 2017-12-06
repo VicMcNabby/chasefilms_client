@@ -82,7 +82,7 @@
 }
 
 .moviePagePoster {
-  width: 220px;
+  width: 250px;
   box-shadow: 6px 6px 8px #111;
   margin-bottom: 15px;
   border: 1px solid #555;
@@ -137,7 +137,7 @@
   background: #D9DD92;
   border-radius: 2px;
   font-family: 'Oswald', sans-serif;
-  margin-left: 178%;
+  margin-left: 205%;
   text-align: center;
   margin-top: 10px;
   cursor: pointer;
@@ -201,8 +201,10 @@ button.searchAgain:hover {
 }
 
 .chaseFilmsLogo {
-  width: 130px;
-  margin-right: 190%;
+  width: 115px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
 }
 
 .ratingLabel {
@@ -315,7 +317,7 @@ button.searchAgain:hover {
   text-shadow: 2px 2px 1px #222;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 770px) {
   .moviePage {
     flex-direction: column;
     justify-content: center;
@@ -342,9 +344,36 @@ button.searchAgain:hover {
     margin-bottom: 5%;
   }
   .searchAgain {
-    margin-left: 0;
+    margin-left: 88%;
+    margin-top: 0px;
   }
   .chaseFilmsLogo {
-    display: none;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 5px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .chaseFilmsLogo {
+    top: 5px;
+    left: -5px;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .moviePagePoster {
+    width: 300px;
+    box-shadow: 6px 6px 8px #111;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+  }
+  @media only screen and (min-height: 1200px) {
+    .moviePagePoster {
+      width: 400px;
+      box-shadow: 6px 6px 8px #111;
+      margin-bottom: 15px;
+      border: 1px solid #555;
+    }
