@@ -8,9 +8,7 @@
   border: 1px solid #999;
   box-shadow: 3px 3px 5px #333;
   background-color: #05384f;
-  background: linear-gradient(#05384f, #606870, #05384f), url("https://www.texasmusicpickers.com/wp-content/uploads/2015/11/Spotlight.jpg") no-repeat;
-  background-blend-mode: multiply;
-  background-position: center;
+  background: linear-gradient(#05384f, #205356, #011a26);
 }
 
 .moviePageHeader {
