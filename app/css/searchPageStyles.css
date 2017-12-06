@@ -245,4 +245,23 @@
   .sideMenuButtonSearchPage {
     margin-top: 5%;
   }
+  .chaseFilmStrip {
+    margin-top: 0;
+    width: 55%;
+  }
+}
+
+@media only screen and (min-height: 910px) and (max-width: 700px) {
+  .movieResultsSection {
+    margin-top: 101%;
+    max-width: 93vw;
+    padding-left: 5%;
+  }
+  .chaseFilmStrip {
+    margin-top: 0;
+    width: 55%;
+  }
+  .sideMenuButtonSearchPage {
+    margin-top: 7%;
+  }
 }

@@ -22,9 +22,9 @@
 
           movies.map(movie => {
             if (movie.poster_url) {
-              movie.poster_url = "http://image.tmdb.org/t/p/w185/" + movie.poster_url
+              movie.poster_url = "https://image.tmdb.org/t/p/w185/" + movie.poster_url
             } else {
-              movie.poster_url = "http://www.saidaonline.com/en/newsgfx/pop-corn-movies-saidaonline.jpg"
+              movie.poster_url = "https://www.saidaonline.com/en/newsgfx/pop-corn-movies-saidaonline.jpg"
             }
           })
 

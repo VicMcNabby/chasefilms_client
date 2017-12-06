@@ -20,9 +20,9 @@
 
             movies.map(movie => {
               if (movie.poster_path) {
-                movie.poster_path = "http://image.tmdb.org/t/p/w185/" + movie.poster_path
+                movie.poster_path = "https://image.tmdb.org/t/p/w185/" + movie.poster_path
               } else {
-                movie.poster_path = "http://www.saidaonline.com/en/newsgfx/pop-corn-movies-saidaonline.jpg"
+                movie.poster_path = "https://www.saidaonline.com/en/newsgfx/pop-corn-movies-saidaonline.jpg"
               }
             })
 
