@@ -1,10 +1,11 @@
 <div class="watchListPage">
   <button class="sideMenuButtonWL" ng-click="visible=!visible;">Menu</button>
   <div ng-class="{'is-visible':visible}" class="menuWL">
+    <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
     <ul>
-      <li ui-sref="searchpage">Search</li>
-      <li ui-sref="collectionpage">Collection Page</li>
-      <li ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
+      <li class="watchlistLink" ui-sref="searchpage">Search</li>
+      <li class="watchlistLink" ui-sref="collectionpage">Collection Page</li>
+      <li class="watchlistLink" ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
     </ul>
   </div>
   <div class="collectionPageInputWL">

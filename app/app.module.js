@@ -1,4 +1,4 @@
 (function() {
   angular
-    .module('chaseFilms', ['ui.router'])
+    .module('chaseFilms', ['ui.router', 'duScroll'])
 }());

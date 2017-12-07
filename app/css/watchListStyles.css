@@ -138,13 +138,19 @@
 
 li {
   letter-spacing: 2px;
-  padding: 2px 2px;
+  padding: 2px 20px;
   font-family: 'Oswald', sans-serif;
   cursor: pointer;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 li:hover {
   font-weight: bolder;
+}
+
+.watchlistLink:hover {
+  background: #c4ff87;
 }
 
 .menuWL {

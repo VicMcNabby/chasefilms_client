@@ -11,11 +11,12 @@
   <div class="moviePageBox">
     <button class="searchAgain" ng-click="visible=!visible;">Menu</button>
     <div ng-class="{'is-visible':visible}" class="menuMoviePage">
+      <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
       <ul>
-        <li ui-sref="searchpage">Search</li>
-        <li ui-sref="collectionpage">My Collection</li>
-        <li ui-sref="watchlist">Watch List</li>
-        <li ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
+        <li class="moviePageLink" ui-sref="searchpage">Search</li>
+        <li class="moviePageLink" ui-sref="collectionpage">My Collection</li>
+        <li class="moviePageLink" ui-sref="watchlist">Watch List</li>
+        <li class="moviePageLink" ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
       </ul>
     </div>
 

@@ -1,20 +1,32 @@
 <div class="collectionPage">
   <button class="sideMenuButton" ng-click="visible=!visible;">Menu</button>
   <div ng-class="{'is-visible':visible}" class="menu">
+    <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
     <ul>
       <li ui-sref="searchpage">Search</li>
       <li ui-sref="watchlist">Watch List</li>
       <li ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
     </ul>
   </div>
-  <div class="collectionPageInput">
+  <div class="collectionPageInput" id="topOfPage">
     <input class="collectionInputBar" ng-model="collectionSearch.title" type="text" placeholder="Find movie...">
+  </div>
+  <button ng-click="visibleRating=!visibleRating;" class="movieRatingSorterButton">sort</button>
+  <div ng-class="{'is-visibleRating':visibleRating}" class="menuRatings">
+    <ul>
+      <li class="movieRatingList" ng-click="visibleRating=!visibleRating;" href="#5stars" du-smooth-scroll>5 stars</li>
+      <li class="movieRatingList" ng-click="visibleRating=!visibleRating;" href="#4stars" du-smooth-scroll>4 stars</li>
+      <li class="movieRatingList" ng-click="visibleRating=!visibleRating;" href="#3stars" du-smooth-scroll>3 stars</li>
+      <li class="movieRatingList" ng-click="visibleRating=!visibleRating;" href="#2stars" du-smooth-scroll>2 stars</li>
+      <li class="movieRatingList" ng-click="visibleRating=!visibleRating;" href="#1star" du-smooth-scroll>1 star</li>
+    </ul>
   </div>
   <div class="collectionLogoBox">
     <img src="app/images/CFDBLogo.png" class="collectionLogo" />
   </div>
-
-  <h2 class="collectionHeader">My Collection</h2>
+  <div class="collectionHeaderBox">
+    <h2 class="collectionHeader" href="#4stars" du-smooth-scroll>My Collection</h2>
+  </div>
   <p class="loadingMessageCollection" ng-show="$ctrl.showLoading">
     Getting Your Collection...
   </p>
@@ -26,33 +38,38 @@
       </h3>
       <i class="fa fa-plus fa-5x"></i>
     </div>
-    <span class="starHeader" ng-show="$ctrl.showDiv5"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <span id="5stars" class="starHeader" ng-show="$ctrl.showDiv5"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv5">
       <div class="movieColumns" ng-if="movie.rating=='5'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
       </div>
     </div>
-    <span class="starHeader" ng-show="$ctrl.showDiv4"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <span id="4stars" class="starHeader" ng-show="$ctrl.showDiv4"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv4">
       <div class="movieColumns" ng-if="movie.rating=='4'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
       </div>
     </div>
     <div>
-      <span class="starHeader" ng-show="$ctrl.showDiv3"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+      <span id="3stars" class="starHeader" ng-show="$ctrl.showDiv3"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+      <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
       <div class="movieBox" ng-show="$ctrl.showDiv3">
         <div class="movieColumns" ng-if="movie.rating=='3'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
           <img class="movieCollectionPoster" src={{movie.poster_url}} />
         </div>
       </div>
     </div>
-    <span class="starHeader" ng-show="$ctrl.showDiv2"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <span id="2stars" class="starHeader" ng-show="$ctrl.showDiv2"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv2">
       <div class="movieColumns" ng-if="movie.rating=='2'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
       </div>
     </div>
-    <span class="starHeader" ng-show="$ctrl.showDiv1"><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <span id="1star" class="starHeader" ng-show="$ctrl.showDiv1"><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
+    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv1">
       <div class="movieColumns" ng-if="movie.rating=='1'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
