@@ -2,7 +2,7 @@
   <button ng-show="$ctrl.alreadyLoggedIn" class="sideMenuButtonSearchPage" ng-click="visible=!visible;">Menu</button>
   <div ng-show="$ctrl.alreadyLoggedIn" ng-class="{'is-visible':visible}" class="menuMoviePage">
     <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
-    <ul>
+    <ul class="menuLinkMenu">
       <li class="moviePageLink" ui-sref="searchpage">Search</li>
       <li class="moviePageLink" ui-sref="collectionpage">My Collection</li>
       <li class="moviePageLink" ui-sref="watchlist">Watch List</li>

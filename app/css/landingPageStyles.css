@@ -187,6 +187,10 @@ body {
   margin-right: 90%;
 }
 
+.menuLinkMenu {
+  margin-top: 15px;
+}
+
 @media only screen and (max-width: 600px) {
   .landingPage {
     height: 98vh;

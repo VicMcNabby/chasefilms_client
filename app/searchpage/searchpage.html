@@ -2,7 +2,7 @@
   <button class="sideMenuButtonSearchPage" ng-click="visible=!visible;">Menu</button>
   <div ng-class="{'is-visible':visible}" class="menuSearchPage">
     <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
-    <ul>
+    <ul class="menuLinkMenu">
       <li class="searchPageLink" ui-sref="collectionpage">My Collection</li>
       <li class="searchPageLink" ui-sref="watchlist">Watch List</li>
       <li class="searchPageLink" ui-sref="home" ng-click="$ctrl.logOut()">Log Out</li>
