@@ -39,14 +39,14 @@
       <i class="fa fa-plus fa-5x"></i>
     </div>
     <span id="5stars" class="starHeader" ng-show="$ctrl.showDiv5"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
+    <i ng-show="$ctrl.showDiv5" class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv5">
       <div class="movieColumns" ng-if="movie.rating=='5'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
       </div>
     </div>
     <span id="4stars" class="starHeader" ng-show="$ctrl.showDiv4"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
+    <i ng-show="$ctrl.showDiv4" class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv4">
       <div class="movieColumns" ng-if="movie.rating=='4'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
@@ -54,7 +54,7 @@
     </div>
     <div>
       <span id="3stars" class="starHeader" ng-show="$ctrl.showDiv3"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-      <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
+      <i ng-show="$ctrl.showDiv3" class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
       <div class="movieBox" ng-show="$ctrl.showDiv3">
         <div class="movieColumns" ng-if="movie.rating=='3'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
           <img class="movieCollectionPoster" src={{movie.poster_url}} />

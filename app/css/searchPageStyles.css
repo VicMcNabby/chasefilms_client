@@ -113,7 +113,7 @@
 }
 
 .movieResultsSection {
-  margin-top: 31%;
+  margin-top: 34%;
   max-width: 96vw;
   padding-left: 10px;
   display: flex;
@@ -150,7 +150,7 @@
   }
 }
 
-@media only screen and (max-width:930px) {
+@media only screen and (max-width:940px) {
   .searchPageInput {
     margin-top: 55px;
   }
@@ -175,6 +175,12 @@
 @media only screen and (max-width:750px) {
   .movieResultsSection {
     margin-top: 55%;
+  }
+}
+
+@media only screen and (min-width:1350px) {
+  .movieResultsSection {
+    margin-top: 30%;
   }
 }
 
@@ -243,6 +249,14 @@
 @media only screen and (min-height: 800px) {
   .movieResultsSection {
     margin-top: 60%;
+    max-width: 97vw;
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (min-height: 800px) and (min-width:1150px) {
+  .movieResultsSection {
+    margin-top: 35%;
     max-width: 97vw;
     padding-left: 5%;
   }
