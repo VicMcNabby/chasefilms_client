@@ -155,7 +155,7 @@ li:hover {
 
 .menuWL {
   width: 0px;
-  height: 25vh;
+  padding-bottom: 20px;
   margin-top: 7%;
   border-radius: 2px;
   padding-top: 10px;

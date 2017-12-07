@@ -11,7 +11,7 @@
   <div class="collectionPageInput" id="topOfPage">
     <input class="collectionInputBar" ng-model="collectionSearch.title" type="text" placeholder="Find movie...">
   </div>
-  <button ng-click="visibleRating=!visibleRating;" class="movieRatingSorterButton">sort</button>
+  <button ng-click="visibleRating=!visibleRating;" class="movieRatingSorterButton">sort <i class="fa fa-sort-amount-desc" aria-hidden="true"></i></button>
   <div ng-class="{'is-visibleRating':visibleRating}" class="menuRatings">
     <ul>
       <li class="movieRatingList" ng-click="visibleRating=!visibleRating;" href="#5stars" du-smooth-scroll>5 stars</li>

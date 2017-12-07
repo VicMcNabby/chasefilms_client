@@ -147,7 +147,7 @@ button.searchAgain:hover {
 
 .menuMoviePage {
   width: 0px;
-  height: 33vh;
+  padding-bottom: 20px;
   margin-top: 7%;
   border-radius: 2px;
   padding-top: 10px;

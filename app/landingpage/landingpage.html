@@ -44,7 +44,9 @@
           <p class="errorMessage" ng-show="$ctrl.error">
             <small>{{$ctrl.errorMessage}}</small>
           </p>
-          <input ng-click="$ctrl.logInUser()" type="submit" class="btn btn-primary submitButton" />
+          <div class="submitButtonBox">
+            <button ng-click="$ctrl.logInUser()" type="submit" class="btn btn-primary submitButton">Submit</button>
+          </div>
         </form>
       </div>
     </div>
@@ -72,7 +74,9 @@
           <label>Password:
           <input class="modalInput" ng-model="$ctrl.newPassword" type="password" />
           </label>
-          <input ng-click="$ctrl.addNewUser()" type="submit" class="btn btn-primary submitButton" />
+          <div class="submitButtonBox">
+            <button ng-click="$ctrl.addNewUser()" type="submit" class="btn btn-primary submitButton">Submit</button>
+          </div>
         </form>
 
       </div>

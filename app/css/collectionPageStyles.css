@@ -134,7 +134,7 @@ li:hover {
 
 .menu {
   width: 0px;
-  height: 25vh;
+  padding-bottom: 20px;
   margin-top: 7%;
   border-radius: 2px;
   padding-top: 10px;
@@ -153,7 +153,6 @@ li:hover {
 
 .menuRatings {
   width: 0px;
-  height: 30vh;
   margin-top: 7%;
   border-radius: 2px;
   padding-top: 15px;
@@ -208,7 +207,7 @@ li:hover {
 
 .movieRatingSorterButton {
   border-radius: 2px;
-  padding: 3px 10px 3px 10px;
+  padding: 10px 10px;
   box-shadow: 1px 1px 2px #000;
   color: #fff;
   background: #164860;
@@ -216,7 +215,7 @@ li:hover {
   text-align: center;
   font-family: 'Nova Flat', sans-serif;
   cursor: pointer;
-  margin: 10px 2px 0px 7px;
+  margin: 7px 2px 0px 3px;
 }
 
 .fa-star {
@@ -262,6 +261,9 @@ li:hover {
   .sideMenuButton {
     margin-left: 75%;
   }
+  .collectionInputBar {
+    height: 45px;
+  }
   .movieColumns {
     display: inline-block;
     margin: 0px 4px 0px 4px;
@@ -275,7 +277,7 @@ li:hover {
     margin-top: 20%;
   }
   .collectionLogo {
-    top: 20px;
+    top: 60px;
   }
   .collectionHeaderBox {
     margin-top: 55%;
