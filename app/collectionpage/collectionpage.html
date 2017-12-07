@@ -62,14 +62,14 @@
       </div>
     </div>
     <span id="2stars" class="starHeader" ng-show="$ctrl.showDiv2"><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
+    <i ng-show="$ctrl.showDiv2" class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv2">
       <div class="movieColumns" ng-if="movie.rating=='2'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
       </div>
     </div>
     <span id="1star" class="starHeader" ng-show="$ctrl.showDiv1"><i class="fa fa-star fa-2x" aria-hidden="true"></i></span>
-    <i class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
+    <i ng-show="$ctrl.showDiv1" class="fa fa-chevron-circle-up fa-2x backToTop" aria-hidden="true" href="#topOfPage" du-smooth-scroll></i>
     <div class="movieBox" ng-show="$ctrl.showDiv1">
       <div class="movieColumns" ng-if="movie.rating=='1'" ng-click="$ctrl.getInfo(movie)" ng-repeat="movie in $ctrl.movies | filter: collectionSearch" ui-sref="moviepage">
         <img class="movieCollectionPoster" src={{movie.poster_url}} />
