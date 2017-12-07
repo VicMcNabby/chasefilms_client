@@ -178,6 +178,12 @@
   }
 }
 
+@media only screen and (max-width:640px) {
+  .movieResultsSection {
+    margin-top: 65%;
+  }
+}
+
 @media only screen and (min-width:1350px) {
   .movieResultsSection {
     margin-top: 30%;
