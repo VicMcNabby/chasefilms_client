@@ -35,12 +35,16 @@
       </div>
       <div class="modal-body">
         <form class="modalForm">
-          <label>Email:
+          <div class="modalFormInputBox">
+            <label>Email:
           <input ng-model="$ctrl.email" class="modalInput" type="email" />
           </label>
-          <label>Password:
+          </div>
+          <div class="modalFormInputBox">
+            <label>Password:
           <input ng-model="$ctrl.password" class="modalInput" type="password" />
           </label>
+          </div>
           <p class="errorMessage" ng-show="$ctrl.error">
             <small>{{$ctrl.errorMessage}}</small>
           </p>
@@ -65,15 +69,21 @@
       </div>
       <div class="modal-body">
         <form class="modalForm">
-          <label>Name:
+          <div class="modalFormInputBox">
+            <label>Name:
           <input class="modalInput" ng-model="$ctrl.newName" type="text" />
           </label>
-          <label>Email:
+          </div>
+          <div class="modalFormInputBox">
+            <label>Email:
           <input class="modalInput" ng-model="$ctrl.newEmail" type="email" />
           </label>
-          <label>Password:
+          </div>
+          <div class="modalFormInputBox">
+            <label>Password:
           <input class="modalInput" ng-model="$ctrl.newPassword" type="password" />
           </label>
+          </div>
           <div class="submitButtonBox">
             <button ng-click="$ctrl.addNewUser()" type="submit" class="btn btn-primary submitButton">Submit</button>
           </div>
