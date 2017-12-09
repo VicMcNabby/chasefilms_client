@@ -198,6 +198,13 @@ body {
   margin-top: 15px;
 }
 
+@media only screen and (max-width: 605px) {
+  .logIn {
+    margin-left: 65%;
+    margin-right: 10%;
+  }
+}
+
 @media only screen and (max-width: 805px) {
   .landingPage {
     height: 98vh;
@@ -216,7 +223,8 @@ body {
     padding-bottom: 50px;
   }
   .logIn {
-    margin-left: 80%;
+    margin-left: 70%;
+    margin-right: 15%;
   }
   .signUpSlogan {
     color: #fff;

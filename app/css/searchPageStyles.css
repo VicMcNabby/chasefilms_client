@@ -176,11 +176,17 @@
   .movieResultsSection {
     margin-top: 55%;
   }
+  .chaseFilmStrip {
+    width: 30%;
+  }
 }
 
 @media only screen and (max-width:640px) {
   .movieResultsSection {
     margin-top: 65%;
+  }
+  .chaseFilmStrip {
+    width: 35%;
   }
 }
 
