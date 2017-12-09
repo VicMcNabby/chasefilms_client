@@ -362,6 +362,9 @@ button.searchAgain:hover {
     top: 5px;
     left: -5px;
   }
+  .moviePageTitle {
+    margin-top: 18%;
+  }
 }
 
 @media only screen and (min-height: 1000px) {

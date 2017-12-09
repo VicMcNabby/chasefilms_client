@@ -216,6 +216,7 @@ li:hover {
   font-family: 'Nova Flat', sans-serif;
   cursor: pointer;
   margin: 7px 2px 0px 3px;
+  z-index: 5;
 }
 
 .fa-star {
