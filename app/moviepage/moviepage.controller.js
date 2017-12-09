@@ -13,6 +13,7 @@
 
     vm.$onInit = function() {
 
+      vm.showLoading = true;
       vm.service = MovieService
       vm.updateMovieId = updateMovieId
 
@@ -65,6 +66,7 @@
             .then(data => {
               vm.movies = data.data
               let movies = vm.movies
+              vm.showLoading = false;
 
               movies.map(movie => {
                 if (movie.movie_db_id == movieId) {

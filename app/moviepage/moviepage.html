@@ -1,5 +1,5 @@
 <div class="moviePage" ng-repeat="info in $ctrl.movie" ng-hide="!info.title">
-  <div class="moviePageVideos">
+  <div ng-hide="$ctrl.showLoading" class="moviePageVideos">
     <h3 class="moviePageHeader">Videos</h3>
 
     <!-- ///// YOUTUBE EMBEDDED VIDEO EXAMPLE ////////
@@ -8,7 +8,7 @@
     <h4 ng-repeat="video in $ctrl.videos">
       <a class="movieLink" href="https://www.youtube.com/watch?v={{video.key}}" target="_blank"> {{video.name}} </a></h4>
   </div>
-  <div class="moviePageBox">
+  <div ng-hide="$ctrl.showLoading" class="moviePageBox">
     <button class="searchAgain" ng-click="visible=!visible;">Menu</button>
     <div ng-class="{'is-visible':visible}" class="menuMoviePage">
       <button type="button" class="close closeMenu" ng-click="visible=!visible;">x</button>
@@ -23,6 +23,9 @@
     <!-- //////////////////////
      <button class="btn" ng-click="$ctrl.deleteMovie()">DELETE</button>
     //////////////////// -->
+    <h3 class="loadingMessage" ng-show="$ctrl.showLoading">
+      Loading Movie Data...
+    </h3>
     <img class="chaseFilmsLogo" src="app/images/CFLogo.png" ui-sref="home" />
     <h1 ng-model="$ctrl.newMovie.title" class="moviePageTitle">{{info.title}}</h1>
     <h4 class="moviePageTagline">{{info.tagline}}</h4>
@@ -106,7 +109,7 @@
 
     <!-- <img class="chaseFilmsLogo" src="app/images/CFLogo.png" ui-sref="home" /> -->
   </div>
-  <div class="moviePageSites">
+  <div ng-hide="$ctrl.showLoading" class="moviePageSites">
     <h3 class="moviePageHeader">More Info</h3>
     <h4 class="moviePageLinks">
       <a class="movieLink" href="https://www.imdb.com/title/{{info.imdb_id}}" target="_blank">  IMDB</a>
