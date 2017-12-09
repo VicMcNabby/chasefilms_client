@@ -367,18 +367,18 @@ button.searchAgain:hover {
   }
 }
 
-@media only screen and (min-height: 1000px) {
+@media only screen and (min-height: 1200px) {
   .moviePagePoster {
-    width: 300px;
+    width: 400px;
     box-shadow: 6px 6px 8px #111;
-    margin-top: 25px;
     margin-bottom: 15px;
     border: 1px solid #555;
   }
-  @media only screen and (min-height: 1200px) {
+  @media only screen and (min-height: 1000px) {
     .moviePagePoster {
-      width: 400px;
+      width: 300px;
       box-shadow: 6px 6px 8px #111;
+      margin-top: 25px;
       margin-bottom: 15px;
       border: 1px solid #555;
     }

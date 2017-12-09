@@ -138,6 +138,12 @@
   margin-bottom: 15px;
 }
 
+@media only screen and (min-width:1350px) {
+  .movieResultsSection {
+    margin-top: 30%;
+  }
+}
+
 @media only screen and (max-width:1000px) {
   .searchPageInput {
     margin-top: 25px;
@@ -187,12 +193,6 @@
   }
   .chaseFilmStrip {
     width: 35%;
-  }
-}
-
-@media only screen and (min-width:1350px) {
-  .movieResultsSection {
-    margin-top: 30%;
   }
 }
 
@@ -258,52 +258,6 @@
   }
 }
 
-@media only screen and (min-height: 800px) {
-  .movieResultsSection {
-    margin-top: 60%;
-    max-width: 97vw;
-    padding-left: 5%;
-  }
-}
-
-@media only screen and (min-height: 800px) and (min-width:1150px) {
-  .movieResultsSection {
-    margin-top: 35%;
-    max-width: 97vw;
-    padding-left: 5%;
-  }
-}
-
-@media only screen and (min-height: 900px) {
-  .movieResultsSection {
-    margin-top: 69%;
-    max-width: 97vw;
-    padding-left: 5%;
-  }
-}
-
-@media only screen and (min-height: 1000px) {
-  .movieResultsSection {
-    margin-top: 75%;
-    max-width: 93vw;
-    padding-left: 5%;
-  }
-  .moviePoster {
-    width: 150px;
-    height: 220px;
-    box-shadow: 2px 2px 2px #000;
-    border: 1px solid #999;
-    margin-bottom: 15px;
-  }
-  .sideMenuButtonSearchPage {
-    margin-top: 5%;
-  }
-  .chaseFilmStrip {
-    margin-top: 0;
-    width: 55%;
-  }
-}
-
 @media only screen and (min-height: 1250px) {
   .movieResultsSection {
     margin-top: 85%;
@@ -348,6 +302,49 @@
   }
 }
 
+@media only screen and (min-height: 1000px) {
+  .movieResultsSection {
+    margin-top: 75%;
+    max-width: 93vw;
+    padding-left: 5%;
+  }
+  .moviePoster {
+    width: 150px;
+    height: 220px;
+    box-shadow: 2px 2px 2px #000;
+    border: 1px solid #999;
+    margin-bottom: 15px;
+  }
+  .sideMenuButtonSearchPage {
+    margin-top: 5%;
+  }
+  .chaseFilmStrip {
+    margin-top: 0;
+    width: 55%;
+  }
+}
+
+@media only screen and (min-height: 1000px) and (min-width: 1200px) {
+  .movieResultsSection {
+    margin-top: 48%;
+    max-width: 98vw;
+  }
+}
+
+@media only screen and (min-height: 1000px) and (max-width: 550px) {
+  .movieResultsSection {
+    margin-top: 145%;
+    max-width: 98vw;
+  }
+  .chaseFilmStrip {
+    margin-top: 0;
+    width: 55%;
+  }
+  .sideMenuButtonSearchPage {
+    margin-top: 7%;
+  }
+}
+
 @media only screen and (min-height: 910px) and (max-width: 700px) {
   .movieResultsSection {
     margin-top: 101%;
@@ -363,18 +360,11 @@
   }
 }
 
-@media only screen and (min-height: 800px) and (max-width: 700px) {
+@media only screen and (min-height: 900px) {
   .movieResultsSection {
-    margin-top: 101%;
-    max-width: 93vw;
+    margin-top: 69%;
+    max-width: 97vw;
     padding-left: 5%;
-  }
-  .chaseFilmStrip {
-    margin-top: 0;
-    width: 55%;
-  }
-  .sideMenuButtonSearchPage {
-    margin-top: 7%;
   }
 }
 
@@ -393,10 +383,27 @@
   }
 }
 
-@media only screen and (min-height: 1000px) and (max-width: 550px) {
+@media only screen and (min-height: 800px) {
   .movieResultsSection {
-    margin-top: 145%;
-    max-width: 98vw;
+    margin-top: 60%;
+    max-width: 97vw;
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (min-height: 800px) and (min-width:1150px) {
+  .movieResultsSection {
+    margin-top: 35%;
+    max-width: 97vw;
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (min-height: 800px) and (max-width: 700px) {
+  .movieResultsSection {
+    margin-top: 101%;
+    max-width: 93vw;
+    padding-left: 5%;
   }
   .chaseFilmStrip {
     margin-top: 0;
@@ -404,12 +411,5 @@
   }
   .sideMenuButtonSearchPage {
     margin-top: 7%;
-  }
-}
-
-@media only screen and (min-height: 1000px) and (min-width: 1200px) {
-  .movieResultsSection {
-    margin-top: 48%;
-    max-width: 98vw;
   }
 }

@@ -23,7 +23,6 @@
 .collectionLogoBox {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .collectionLogo {
@@ -244,9 +243,6 @@ li:hover {
   .sideMenuButton {
     margin-left: 83%;
   }
-  /*.collectionHeader {
-    margin-top: 20%;
-  }*/
   .collectionHeaderBox {
     margin-top: 20%;
   }
