@@ -15,6 +15,7 @@
       if (localStorage.token) {
         vm.alreadyLoggedIn = true
       }
+
     }
 
 
