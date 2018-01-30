@@ -22,6 +22,9 @@
   <div ng-hide="$ctrl.showLoading" class="movieCollectionSection">
 
     <div class="movieBoxWL">
+      <p ng-show="$ctrl.noMovies" class="noMoviesInfo">
+        Click below to start adding movies you WANT to see to your Watch List
+      </p>
       <div ng-show="$ctrl.noMovies" class="addFirstMovieWL" ui-sref="searchpage">
         <h3 class="firstMovieTextWL">
           Add your first movie

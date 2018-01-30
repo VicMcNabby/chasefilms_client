@@ -82,6 +82,12 @@
   margin-bottom: 15px;
 }
 
+.noMovieInfo {
+  font-family: 'Comfortaa', sans-serif;
+  color: #000;
+  font-weight: bold;
+}
+
 .addFirstMovie {
   display: flex;
   flex-direction: column;

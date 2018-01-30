@@ -93,6 +93,12 @@
   background: #d4e7f4;
 }
 
+.noMoviesInfo {
+  font-family: 'Comfortaa', sans-serif;
+  color: #E8D6CB;
+  text-shadow: 1px 1px 1px #000;
+}
+
 .firstMovieTextWL {
   text-align: center;
   font-family: "Oswald", serif;

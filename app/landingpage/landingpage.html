@@ -15,7 +15,7 @@
     <img class="projector" src="app/images/CFProjectorBlue.png" />
     <div ng-hide="$ctrl.alreadyLoggedIn" class="getStartedBox">
       <h2 class="signUpSlogan">Start your collection now...</h2>
-      <img class="signUpTicket" src="app/images/CFTicketGetStarted.png" data-toggle="modal" data-target="#signInModal" />
+      <img class="signUpTicket" src="app/images/CFTicketGetStarted.png" data-toggle="modal" data-target="#infoModal" />
       <p class="beginSlogan">
         Click the tickets to begin
       </p>
@@ -58,6 +58,7 @@
   </div>
 </div>
 
+<!-- Modal -->
 <div class="modal fade" id="signInModal" role="dialog">
   <div class="modal-dialog modalBox">
 
@@ -88,6 +89,31 @@
             <button ng-click="$ctrl.addNewUser()" type="submit" class="btn btn-primary submitButton">Submit</button>
           </div>
         </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" role="dialog">
+  <div class="modal-dialog modalBox">
+    <!-- Modal Body -->
+    <div class="modal-content modalBody">
+      <div class="modal-header">
+        <h4 class="modal-title">What is Chase Films?</h4>
+        <button type="button" class="close closeModal" data-dismiss="modal">x</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          ChaseFilms is a movie database app with an extensive library of films. The main features of the app are the ability to rate and save movies you've seen to your 'Collection Page', and save movies you want to watch to your 'Watchlist'. You can also get
+          an individual movie's trailers, details, and description.
+        </p>
+        <div class="submitButtonBox">
+          <button data-dismiss="modal" data-toggle="modal" data-target="#signInModal" type="button" class="btn btn-primary submitButton">Continue <i class="fa fa-arrow-right"></i></button>
+        </div>
 
       </div>
     </div>

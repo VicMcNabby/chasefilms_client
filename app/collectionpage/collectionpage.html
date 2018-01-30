@@ -32,6 +32,9 @@
   </p>
 
   <div ng-hide="$ctrl.showLoading" class="movieCollectionSection">
+    <p ng-show="$ctrl.noMovies" class="noMovieInfo">
+      Click below to start adding movies you have SEEN to your Collection
+    </p>
     <div ng-show="$ctrl.noMovies" class="addFirstMovie" ui-sref="searchpage">
       <h3 class="firstMovieText">
         Add your first movie

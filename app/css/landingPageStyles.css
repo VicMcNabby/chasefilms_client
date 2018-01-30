@@ -78,7 +78,7 @@ body {
   font-style: italic;
   color: #fff;
   animation-name: fadein;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
 }
 
 .signUpTicket {
@@ -86,7 +86,7 @@ body {
   width: 125px;
   z-index: 2;
   animation-name: slideleft;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
   cursor: pointer;
 }
 
@@ -238,7 +238,7 @@ body {
   }
   .signUpTicket {
     animation-name: slideup;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
   }
   @keyframes slideup {
     0% {
@@ -265,6 +265,7 @@ body {
   .projector {
     width: 70%;
     margin-bottom: 0%;
+    margin-top: 20%;
   }
 }
 
