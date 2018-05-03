@@ -76,6 +76,11 @@
   box-shadow: 2px 2px 2px #000;
   border: 1px solid #999;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.movieCollectionPosterWL:hover {
+  opacity: .8;
 }
 
 .addFirstMovieWL {
@@ -128,6 +133,7 @@
   background: #F3C969;
   text-align: center;
   box-shadow: 2px 2px 3px #000;
+  cursor: pointer;
 }
 
 .watchedIcon:hover {

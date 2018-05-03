@@ -80,6 +80,11 @@
   box-shadow: 2px 2px 2px #000;
   border: 1px solid #999;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.movieCollectionPoster:hover {
+  opacity: .8;
 }
 
 .noMovieInfo {
